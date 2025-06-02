@@ -1,0 +1,80 @@
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import icon from "../assets/icon.png";
+import Image from "next/image";
+
+interface ShopTheftProps {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
+
+const shopTheft: ShopTheftProps[] = [
+  {
+    icon: <Image
+            src={icon}
+            alt=""
+            className="w-[75px] object-contain rounded-lg"
+          />,
+    title: "Blah",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+  },
+  {
+    icon: <Image
+            src={icon}
+            alt=""
+            className="w-[75px] object-contain rounded-lg"
+          />,
+    title: "BLAH",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+  },
+  {
+    icon: <Image
+            src={icon}
+            alt=""
+            className="w-[75px] object-contain rounded-lg"
+          />,
+    title: "blahh",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+  },
+  {
+    icon: <Image
+            src={icon}
+            alt=""
+            className="w-[75px] object-contain rounded-lg"
+          />,
+    title: "bleh",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+  },
+];
+
+export const WhatIsShopTheft = () => {
+  return (
+    <section id="shoptheft" className="container text-center py-24 sm:py-32">
+      <h2 className="text-3xl md:text-4xl font-bold ">
+        What is Shop Theft?
+      </h2>
+      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+        dolor pariatur sit!
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {shopTheft.map(({ icon, title, description }: ShopTheftProps) => (
+          <Card key={title} className="bg-muted/50">
+            <CardHeader>
+              <CardTitle className="grid gap-4 place-items-center">
+                {icon}
+                {title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>{description}</CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+};
