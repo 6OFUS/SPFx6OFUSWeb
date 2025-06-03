@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback } from "./ui/avatar";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,7 +8,7 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Instagram, Linkedin, Youtube } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import icon from "../assets/icon.png";

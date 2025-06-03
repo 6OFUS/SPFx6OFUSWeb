@@ -1,13 +1,11 @@
-module.exports = {
-  output: "standalone",
+module.export = {
+  output: "export",
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "i.pravatar.cc",
-        port: "",
-        pathname: "/**",
+        hostname: "spfx6ofus.web.app",
       },
     ],
+    unoptimized: true,
   },
-};
+}
