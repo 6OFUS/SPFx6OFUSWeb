@@ -10,7 +10,6 @@ import {
 import { navbarLinksList, NavProps } from "@/config/nav";
 import { Menu } from "lucide-react";
 import { buttonVariants } from "./ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
@@ -44,16 +43,6 @@ export const MobileNavFragment = () => {
               {label}
             </Link>
           ))}
-          <Link
-            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-            target="_blank"
-            className={`w-[110px] border ${buttonVariants({
-              variant: "secondary",
-            })}`}
-          >
-            <GitHubLogoIcon className="mr-2 w-5 h-5" />
-            Github
-          </Link>
         </nav>
       </SheetContent>
     </Sheet>
