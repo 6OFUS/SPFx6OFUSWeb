@@ -6,13 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import policecartoon from "../assets/police-cartoon.png";
-import Image, { StaticImageData } from "next/image";
 
 interface ASKProtocolProps {
   title: string;
   description: string;
-  image: StaticImageData;
+  image: string;
 }
 
 const features: ASKProtocolProps[] = [
@@ -20,19 +18,19 @@ const features: ASKProtocolProps[] = [
     title: "Ask",
     description:
       "Ask the suspicious person politely, hand them a basket/carrier",
-    image: policecartoon,
+    image: "../assets/police-cartoon.png",
   },
   {
     title: "Stay Safe",
     description:
       "Stay safe, notify your colleagues to keep them alert and aware of the situation",
-    image: policecartoon,
+    image: "../assets/police-cartoon.png",
   },
   {
     title: "Keep Close",
     description:
       "Keep close to the suspicious person, observe their actions and behavior",
-    image: policecartoon,
+    image: "../assets/police-cartoon.png",
   },
 ];
 
@@ -78,7 +76,7 @@ export const ASKProtocol = () => {
             <CardContent>{description}</CardContent>
 
             <CardFooter>
-              <Image
+              <img
                 src={image}
                 alt="About feature"
                 className="w-[200px] lg:w-[300px] mx-auto"

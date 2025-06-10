@@ -7,8 +7,6 @@ import {
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
-import Image from 'next/image'
-import icon from "../assets/icon.png";
 import { MobileNavFragment } from "@/components/MobileNavFragment";
 import { navbarLinksList, NavProps } from "@/config/nav";
 import { siteConfig } from "@/config/site";
@@ -22,8 +20,8 @@ export const Navbar = () => {
         <NavigationMenuList className="container h-16 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <a className="ml-2 font-bold text-xl flex items-center">
-              <Image
-                src={icon}
+              <img
+                src="../assets/icon.png"
                 alt="Please PayLeh!"
                 className="lucide lucide-panels-top-left mr-2 w-20 h-20"
               />

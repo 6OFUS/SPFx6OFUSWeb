@@ -11,12 +11,6 @@ import {
 import { Instagram, Youtube } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import icon from "../assets/icon.png";
-import xavatar from "../assets/X-avatar.png";
-import sixofuslogo from "../assets/6ofus-logo.png";
-import policelogo from "../assets/police-cartoon.png";
-
-import Image from "next/image";
 
 export const HeroCards = () => {
   return (
@@ -25,8 +19,8 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <Image
-                src={xavatar}
+            <img
+                src="../assets/X-avatar.png"
                 alt=""
                 className=""
             />
@@ -45,8 +39,8 @@ export const HeroCards = () => {
       {/* 6OFUS */}
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
-          <Image
-            src={sixofuslogo}
+          <img
+            src="../assets/6ofus-logo.png"
             alt="6OFUS"
             width={100}
             height={100}
@@ -107,8 +101,8 @@ export const HeroCards = () => {
       {/* SPF */}
       <Card className="absolute top-[210px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
-          <Image
-                src={policelogo}
+          <img
+                src="../assets/police-cartoon.png"
                 alt="Police Logo"
                 width={500}
                 height={500}
@@ -126,8 +120,8 @@ export const HeroCards = () => {
       <Card className="absolute w-[350px] -right-[10px] bottom-[0px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
           <div className="mt-1 p-1 rounded-2xl">
-            <Image
-                src={icon}
+            <img
+                src="../assets/icon.png"
                 alt="Please PayLeh!"
                 className="flex self-center"
               />

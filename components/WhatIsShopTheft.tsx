@@ -1,6 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import icon from "../assets/icon.png";
-import Image from "next/image";
 
 interface ShopTheftProps {
   icon: JSX.Element;
@@ -10,8 +8,8 @@ interface ShopTheftProps {
 
 const shopTheft: ShopTheftProps[] = [
   {
-    icon: <Image
-            src={icon}
+    icon: <img
+            src= "../assets/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,
@@ -20,8 +18,8 @@ const shopTheft: ShopTheftProps[] = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
   },
   {
-    icon: <Image
-            src={icon}
+    icon: <img
+            src= "../assets/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,
@@ -30,8 +28,8 @@ const shopTheft: ShopTheftProps[] = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
   },
   {
-    icon: <Image
-            src={icon}
+    icon: <img
+            src= "../assets/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,
@@ -40,8 +38,8 @@ const shopTheft: ShopTheftProps[] = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
   },
   {
-    icon: <Image
-            src={icon}
+    icon: <img
+            src= "../assets/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,

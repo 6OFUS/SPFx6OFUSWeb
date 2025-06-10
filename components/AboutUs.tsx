@@ -1,9 +1,6 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Gamepad2, Users, PhoneOutgoing } from "lucide-react";
 
-import sixofuslogo from "../assets/6ofus-logo.png";
-import Image from "next/image";
-
 interface AboutUsProps {
   title: string;
   description: string;
@@ -66,8 +63,8 @@ export const AboutUs = () => {
           </div>
         </div>
 
-        <Image
-          src={sixofuslogo}
+        <img
+          src="../assets/6ofus-logo.png"
           className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
           alt="About services"
         />

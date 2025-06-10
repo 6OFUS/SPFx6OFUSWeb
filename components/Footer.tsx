@@ -1,6 +1,4 @@
 import Link from "next/link";
-import icon from "../assets/icon.png";
-import Image from 'next/image'
 import { siteConfig } from "@/config/site";
 const { title } = siteConfig;
 
@@ -12,8 +10,8 @@ export const Footer = () => {
       <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <Link href="/" className="font-bold text-xl flex items-center">
-            <Image
-                src={icon}
+            <img
+                src="../assets/icon.png"
                 alt="Please PayLeh!"
                 className="lucide lucide-panels-top-left mr-2 w-20 h-20"
               />
