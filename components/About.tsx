@@ -6,7 +6,7 @@ export const About = () => {
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
           <img
-            src="../assets/icon.png"
+            src="/icon.png"
             alt=""
             className="w-[300px] object-contain rounded-lg ml-2"
           />
@@ -26,7 +26,6 @@ export const About = () => {
                 amet, consectetur adipiscing elit.
               </p>
             </div>
-
             <Statistics />
           </div>
         </div>

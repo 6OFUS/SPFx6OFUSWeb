@@ -64,7 +64,7 @@ export const AboutUs = () => {
         </div>
 
         <img
-          src="../assets/6ofus-logo.png"
+          src="/6ofus-logo.png"
           className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
           alt="About services"
         />

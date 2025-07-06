@@ -20,7 +20,7 @@ export const HeroCards = () => {
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
             <img
-                src="../assets/X-avatar.png"
+                src="/X-avatar.png"
                 alt=""
                 className=""
             />
@@ -40,7 +40,7 @@ export const HeroCards = () => {
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="../assets/6ofus-logo.png"
+            src="/6ofus-logo.png"
             alt="6OFUS"
             width={100}
             height={100}
@@ -102,7 +102,7 @@ export const HeroCards = () => {
       <Card className="absolute top-[210px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <img
-                src="../assets/police-cartoon.png"
+                src="/police-cartoon.png"
                 alt="Police Logo"
                 width={500}
                 height={500}
@@ -121,7 +121,7 @@ export const HeroCards = () => {
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
           <div className="mt-1 p-1 rounded-2xl">
             <img
-                src="../assets/icon.png"
+                src="/icon.png"
                 alt="Please PayLeh!"
                 className="flex self-center"
               />

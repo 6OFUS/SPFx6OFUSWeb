@@ -18,19 +18,19 @@ const features: ASKProtocolProps[] = [
     title: "Ask",
     description:
       "Ask the suspicious person politely, hand them a basket/carrier",
-    image: "../assets/police-cartoon.png",
+    image: "/police-cartoon.png",
   },
   {
     title: "Stay Safe",
     description:
       "Stay safe, notify your colleagues to keep them alert and aware of the situation",
-    image: "../assets/police-cartoon.png",
+    image: "/police-cartoon.png",
   },
   {
     title: "Keep Close",
     description:
       "Keep close to the suspicious person, observe their actions and behavior",
-    image: "../assets/police-cartoon.png",
+    image: "/police-cartoon.png",
   },
 ];
 

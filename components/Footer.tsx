@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="col-span-full xl:col-span-2">
           <Link href="/" className="font-bold text-xl flex items-center">
             <img
-                src="../assets/icon.png"
+                src="/icon.png"
                 alt="Please PayLeh!"
                 className="lucide lucide-panels-top-left mr-2 w-20 h-20"
               />

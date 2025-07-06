@@ -9,7 +9,7 @@ interface ShopTheftProps {
 const shopTheft: ShopTheftProps[] = [
   {
     icon: <img
-            src= "../assets/icon.png"
+            src= "/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,
@@ -19,7 +19,7 @@ const shopTheft: ShopTheftProps[] = [
   },
   {
     icon: <img
-            src= "../assets/icon.png"
+            src= "/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,
@@ -29,7 +29,7 @@ const shopTheft: ShopTheftProps[] = [
   },
   {
     icon: <img
-            src= "../assets/icon.png"
+            src= "/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,
@@ -39,7 +39,7 @@ const shopTheft: ShopTheftProps[] = [
   },
   {
     icon: <img
-            src= "../assets/icon.png"
+            src= "/icon.png"
             alt=""
             className="w-[75px] object-contain rounded-lg"
           />,

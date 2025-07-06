@@ -21,7 +21,7 @@ export const Navbar = () => {
           <NavigationMenuItem className="font-bold flex">
             <a className="ml-2 font-bold text-xl flex items-center">
               <img
-                src="../assets/icon.png"
+                src="/icon.png"
                 alt="Please PayLeh!"
                 className="lucide lucide-panels-top-left mr-2 w-20 h-20"
               />
