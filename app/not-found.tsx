@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const ComingSoon = () => {
+export default function NotFound() {
   return (
     <div className="bg-[url(/bkgd2.png)] w-screen h-screen bg-cover bg-center flex items-center justify-center flex-col">
       <div className="flex h-1/4 my-10 w-1/3 self-start">
@@ -8,17 +8,17 @@ export const ComingSoon = () => {
           <img src="/coming-soon/TopLeft.png" alt="" className="mx-auto" />
           <div className="flex flex-row px-10">
             <Link href="https://www.instagram.com/6ofus2025/" >
-              <img src="/ig.png" alt="" className="mx-auto w-20 h-20" />
+              <img src="/coming-soon/ig.png" alt="" className="mx-auto w-20 h-20" />
             </Link>
             <Link href="https://www.tiktok.com/@6ofus2025">
-              <img src="/tt.png" alt="" className="mx-auto w-20 h-20" />
+              <img src="/coming-soon/tt.png" alt="" className="mx-auto w-20 h-20" />
             </Link>
           </div>
         </div>
       </div>
       <div className="flex h-3/4 w-3/4">
         <div className="flex items-start justify-start flex-row">
-          <img src="/coming-soon/staytuned.png" alt="" className="mx-auto w-1/2" />
+          <img src="/404.png" alt="" className="mx-auto w-1/2" />
           <img src="/coming-soon/follow.png" alt="" className="mx-auto w-1/2" />
         </div>
       </div>
