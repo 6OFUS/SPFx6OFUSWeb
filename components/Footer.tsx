@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
 
 export const Footer = () => {
   return (
@@ -20,7 +19,7 @@ export const Footer = () => {
           <Link href="/" className="font-bold text-xl flex items-center">
             <img
                 src="/coming-soon/60fus.png"
-                alt="Please PayLeh!"
+                alt="6OFUS Logo"
                 className="lucide lucide-panels-top-left mr-2 h-24"
               />
           </Link>
