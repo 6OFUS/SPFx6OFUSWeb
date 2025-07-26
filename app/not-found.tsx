@@ -8,10 +8,10 @@ export default function NotFound() {
           <img src="/coming-soon/TopLeft.png" alt="" className="mx-auto" />
           <div className="flex flex-row px-10">
             <Link href="https://www.instagram.com/6ofus2025/" >
-              <img src="/coming-soon/ig.png" alt="" className="mx-auto w-20 h-20" />
+              <img src="/ig.png" alt="" className="mx-auto w-20 h-20" />
             </Link>
             <Link href="https://www.tiktok.com/@6ofus2025">
-              <img src="/coming-soon/tt.png" alt="" className="mx-auto w-20 h-20" />
+              <img src="/tt.png" alt="" className="mx-auto w-20 h-20" />
             </Link>
           </div>
         </div>
