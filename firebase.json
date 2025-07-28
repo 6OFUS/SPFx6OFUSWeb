@@ -10,6 +10,10 @@
         {
           "source": "/home",
           "destination": "/home.html"
+        },
+        {
+          "source": "/events",
+          "destination": "/events.html"
         }
       ]
   }

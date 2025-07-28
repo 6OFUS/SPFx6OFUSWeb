@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Please PayLeh!",
-  title: "Please PayLeh!",
+  name: "6OFUSxSPF",
+  title: "6OFUSxSPF", 
   description:
     "Shop Theft Prevention Simulation for Public Awareness and Education",
 };
