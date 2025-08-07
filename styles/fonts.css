@@ -1,13 +1,131 @@
+:root {
+  --font-nexa: 'Nexa';
+  --font-heavitas: 'Heavitas';
+  --font-komikax: 'Komikax';
+}
+
 @font-face {
-  font-family: 'Coolvetica';
-  src: url('/fonts/Coolvetica.otf') format('truetype');
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Heavitas';
-  src: url('/fonts/Heavitas.tff') format('truetype');
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Book.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-BookItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-HeavyItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-XBold.ttf') format('truetype');
+  font-weight: 950;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa/Nexa-XBoldItalic.ttf') format('truetype');
+  font-weight: 950;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Heavitas';
+  src: url('/fonts/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Komikax';
+  src: url('/fonts/KOMIKAX_.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }

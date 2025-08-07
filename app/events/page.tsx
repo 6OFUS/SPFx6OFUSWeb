@@ -1,6 +1,6 @@
 import { EventsHero } from "@/components/EventsHero";
 
-export default function ComingSoonPage() {
+export default function EventsPage() {
   return (
     <>
       <EventsHero />

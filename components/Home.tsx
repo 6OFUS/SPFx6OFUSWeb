@@ -28,15 +28,15 @@ export const Home = () => {
           </Link>
         </div>
 
-        <div className="flex w-1/3">
-          <Link href="/" className="flex h-1/5 justify-end">
+        <div className="flex w-1/3 justify-end">
+          <Link href="/events" className="flex h-1/5">
             <img src="/home/eventsBtn.png" alt="Events"/>
           </Link>
         </div>
       </div>
 
       {/* Bottom Half */}
-      <div className="h-1/2 w-full flex justify-center items-center px-6">
+      <div className="h-1/2 w-full flex justify-center items-center px-6 gap-14 mb-10 ml-5">
         {/* SHOP THEFT */}
         <Link href="/shop-theft">
           <img

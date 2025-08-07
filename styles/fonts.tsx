@@ -7,7 +7,12 @@ export const fontHeavitas = {
   className: "font-heavitas",
 };
 
-export const fontCoolvetica = {
-  variable: "--font-coolvetica",
-  className: "font-coolvetica",
+export const fontNexa = {
+  variable: "--font-nexa",
+  className: "font-nexa",
+};
+
+export const fontKomikax = {
+  variable: "--font-komikax",
+  className: "font-komikax",
 };

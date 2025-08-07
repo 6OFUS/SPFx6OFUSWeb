@@ -26,7 +26,7 @@ export const EventsHero = () => {
           </Link>
         </div>
 
-        <div className="flex w-1/3">
+        <div className="flex w-1/3 justify-end">
           <Link href="/" className="flex justify-end">
             <img src="/homeBtn.png" alt="Home"/>
           </Link>

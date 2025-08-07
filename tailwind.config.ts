@@ -22,8 +22,9 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        heavitas: ['"Heavitas"', 'sans-serif'],
-        coolvetica: ['"Coolvetica"', 'sans-serif'],
+        heavitas: ["var(--font-heavitas)"],
+        nexa: ["var(--font-nexa)", "sans-serif"],
+        komikax: ["var(--font-komikax)", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -59,6 +60,14 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        richblack: "#0A1624",
+        pennblue: "#131747",
+        processcyan: "#49AFD7",
+        turquoise: "#63CEB0",
+        earthy: "#F0AA52",
+        safetyorange: "#F08132",
+        rojo: "#D82225",
+        softwhite: "#FBFCFF",
       },
       borderRadius: {
         lg: "var(--radius)",
