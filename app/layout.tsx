@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+// import { ThemeProvider } from "@/components/providers/theme-provider";
 import { AOSProvider }from '@/components/providers/aos-provider';
 import { Footer } from "@/components/Footer";
 // import { Navbar } from "@/components/Navbar";
@@ -32,7 +32,7 @@ export default function RootLayout({
         )}
       >
         <AOSProvider>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem> */}
             <div className="relative flex min-h-screen flex-col">
               {/* <Navbar /> */}
 
@@ -40,7 +40,7 @@ export default function RootLayout({
               <Footer />
               <ScrollToTop />
             </div>
-          </ThemeProvider>
+          {/* </ThemeProvider> */}
         </AOSProvider>
       </body>
     </html>

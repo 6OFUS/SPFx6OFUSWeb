@@ -1,0 +1,69 @@
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { buttonVariants } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
+import { MobileNavFragment } from "@/components/MobileNavFragment";
+import { navbarLinksList, NavProps } from "@/config/nav";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
+const { title } = siteConfig;
+
+export const Navbar = () => {
+  return (
+    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+      <NavigationMenu className="mx-auto">
+        <NavigationMenuList className="container h-16 px-4 w-screen flex justify-between ">
+          <NavigationMenuItem className="font-bold flex">
+            <a className="ml-2 font-bold text-xl flex items-center">
+              <img
+                src="/icon.png"
+                alt="Please PayLeh!"
+                className="lucide lucide-panels-top-left mr-2 w-20 h-20"
+              />
+              <span className="hidden md:block">{title}</span>
+            </a>
+          </NavigationMenuItem>
+
+          {/* mobile */}
+          <div className="flex md:hidden">
+            <ModeToggle />
+            <MobileNavFragment />
+          </div>
+
+          {/* desktop */}
+          <nav className="hidden md:flex gap-2">
+            {navbarLinksList.map((route: NavProps, i) => (
+              <Link
+                href={route.href}
+                key={i}
+                className={`text-[17px] ${buttonVariants({
+                  variant: "ghost",
+                })}`}
+              >
+                {route.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden md:flex gap-2">
+            <Link
+              href="/"
+              target="_blank"
+              className={`border ${buttonVariants({ variant: "secondary" })}`}
+            >
+              Get Started
+              <ArrowTopRightIcon className="ml-2 w-5 h-5" />
+            </Link>
+
+            <ModeToggle />
+          </div>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </header>
+  );
+};

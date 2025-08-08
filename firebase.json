@@ -18,6 +18,10 @@
         {
           "source": "/aboutus",
           "destination": "/aboutus.html"
+        },
+        {
+          "source": "/game",
+          "destination": "/game.html"
         }
       ]
   }

@@ -1,0 +1,123 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { Navbar } from "./Navbar";
+
+declare global {
+  function createUnityInstance(
+    canvas: HTMLCanvasElement,
+    config: {
+      dataUrl: string;
+      frameworkUrl: string;
+      codeUrl: string;
+      streamingAssetsUrl?: string;
+      companyName?: string;
+      productName?: string;
+      productVersion?: string;
+    },
+    onProgress?: (progress: number) => void
+  ): Promise<{ SetFullscreen: (flag: number) => void }>;
+}
+
+export const UnityGame = () => {
+  const unityCanvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [unityInstance, setUnityInstance] = useState<{
+    SetFullscreen: (flag: number) => void;
+  } | null>(null);
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/Build/payleh.loader.js";
+    script.onload = () => {
+      if (unityCanvasRef.current) {
+        createUnityInstance(
+          unityCanvasRef.current,
+          {
+            dataUrl: "/Build/payleh.data.unityweb",
+            frameworkUrl: "/Build/payleh.framework.js.unityweb",
+            codeUrl: "/Build/payleh.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "6OFUS",
+            productName: "justpayleh!",
+            productVersion: "1.0",
+          },
+          (progress) => {
+            setLoadingProgress(progress);
+            if (progress >= 1) {
+              setTimeout(() => setShowSplash(false), 500);
+            }
+          }
+        )
+          .then((instance) => {
+            console.log("Unity loaded");
+            setUnityInstance(instance);
+          })
+          .catch((message) => alert(message));
+      }
+    };
+    document.body.appendChild(script);
+  }, []);
+
+  return (
+    <>
+      <style>{`
+        @media (orientation: landscape) and (max-width: 768px) {
+          #unity-container {
+            transform: rotate(90deg);
+            transform-origin: left top;
+            width: 100vh;
+            height: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          body, html, #__next {
+            overflow: hidden;
+          }
+        }
+      `}</style>
+
+      <div className="w-full h-auto flex flex-col items-center justify-center bg-[url(/oriBg.png)] bg-contain bg-top bg-center overflow-hidden px-4 py-6 relative">
+        <Navbar />
+        <div
+          id="unity-container"
+          className="mt-40 w-full max-w-[960px] aspect-video bg-black relative"
+        >
+          <canvas
+            id="unity-canvas"
+            ref={unityCanvasRef}
+            className="w-full h-full"
+          ></canvas>
+
+          {showSplash && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 text-white z-10 transition-opacity duration-700">
+              <h2 className="text-3xl font-bold mb-4 select-none">
+                Loading...
+              </h2>
+              <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+
+              <div className="w-64 h-3 bg-gray-700 rounded mt-6 overflow-hidden">
+                <div
+                  className="bg-blue-500 h-full transition-all duration-300"
+                  style={{ width: `${loadingProgress * 100}%` }}
+                ></div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {unityInstance && !showSplash && (
+          <button
+            onClick={() => unityInstance.SetFullscreen(1)}
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition select-none"
+            aria-label="Go fullscreen"
+          >
+            Fullscreen
+          </button>
+        )}
+      </div>
+    </>
+  );
+};
