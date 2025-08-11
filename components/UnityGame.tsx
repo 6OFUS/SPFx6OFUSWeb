@@ -40,7 +40,7 @@ export const UnityGame = () => {
             codeUrl: "/Build/payleh.wasm.unityweb",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "6OFUS",
-            productName: "justpayleh!",
+            productName: "please payleh!",
             productVersion: "1.0",
           },
           (progress) => {
