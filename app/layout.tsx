@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { AOSProvider }from '@/components/providers/aos-provider';
 import { Footer } from "@/components/Footer";
 // import { Navbar } from "@/components/Navbar";
-import { ScrollToTop } from "@/components/ScrollToTop";
+// import { ScrollToTop } from "@/components/ScrollToTop";
 
 import "./globals.css";
 import "@/styles/fonts.css";
@@ -38,7 +38,7 @@ export default function RootLayout({
 
               <div className="flex-1">{children}</div>
               <Footer />
-              <ScrollToTop />
+              {/* <ScrollToTop /> */}
             </div>
           {/* </ThemeProvider> */}
         </AOSProvider>
