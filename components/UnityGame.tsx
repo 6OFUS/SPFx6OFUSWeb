@@ -16,7 +16,7 @@ declare global {
       productVersion?: string;
     },
     onProgress?: (progress: number) => void
-  ): Promise<{ SetFullscreen: (flag: number) => void }>;
+  ): Promise<{ SetFullscreen: (flag: number) => void; Quit: () => Promise<void>; }>;
 }
 
 export const UnityGame = () => {
@@ -24,14 +24,18 @@ export const UnityGame = () => {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [unityInstance, setUnityInstance] = useState<{
     SetFullscreen: (flag: number) => void;
+    Quit: () => Promise<void>;
   } | null>(null);
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
+    let instance: { Quit: () => Promise<void> } | null = null;
+
     const script = document.createElement("script");
     script.src = "/Build/payleh.loader.js";
     script.onload = () => {
-      if (unityCanvasRef.current) {
+      if (unityCanvasRef.current && isMounted) {
         createUnityInstance(
           unityCanvasRef.current,
           {
@@ -50,14 +54,29 @@ export const UnityGame = () => {
             }
           }
         )
-          .then((instance) => {
+          .then((unityInstance) => {
             console.log("Unity loaded");
-            setUnityInstance(instance);
+            setUnityInstance(unityInstance);
+            instance = unityInstance;
           })
           .catch((message) => alert(message));
       }
     };
+
     document.body.appendChild(script);
+
+    return () => {
+      isMounted = false;
+      // Cleanup Unity instance on unmount
+      if (instance) {
+        instance.Quit().then(() => {
+          console.log("Unity instance quit");
+          setUnityInstance(null);
+        });
+      }
+      // Remove the script element to avoid duplication if remounted
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
@@ -78,7 +97,7 @@ export const UnityGame = () => {
           }
         }
       `}</style>
-      <div className="w-screen h-screen flex flex-col items-center bg-[url(/oriBg.png)] bg-cover  bg-no-repeat bg-top bg-center overflow-hidden px-4 py-6 relative">
+      <div className="w-screen h-auto flex flex-col items-center bg-[url(/oriBg.png)] bg-cover bg-top bg-center overflow-hidden px-4 py-6 relative">
         <Navbar />
         <div
           id="unity-container"
@@ -110,7 +129,7 @@ export const UnityGame = () => {
         {unityInstance && !showSplash && (
           <button
             onClick={() => unityInstance.SetFullscreen(1)}
-            className="bg-white border-4 border-black px-10 py-2 rounded-2xl mx-auto shadow-orangeGlow my-8"
+            className="bg-white border-4 border-black px-10 py-2 rounded-2xl mx-auto shadow-orangeGlow mt-16 mb-64"
             aria-label="Go fullscreen"
           >
             Fullscreen

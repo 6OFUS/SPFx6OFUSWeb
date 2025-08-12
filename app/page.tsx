@@ -19,12 +19,15 @@
 //     </>
 //   );
 // }
-import { ComingSoon } from "@/components/ComingSoon";
 
-export default function ComingSoonPage() {
+import { Home } from "@/components/Home";
+import { Utilities } from "@/components/Utilities";
+
+export default function HomePage() {
   return (
     <>
-      <ComingSoon />
+      <Utilities />
+      <Home />
     </>
   );
 }

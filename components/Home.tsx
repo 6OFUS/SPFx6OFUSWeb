@@ -26,7 +26,7 @@ export const Home = () => {
 
         {/* Center Banner */}
         <div className="flex w-full lg:w-1/3 items-center justify-center">
-          <Link href="" className="flex justify-center items-center">
+          <Link href="/aboutus" className="flex justify-center items-center">
             <img
               src="/home/6ofus.png"
               alt="6OFUS Banner"
@@ -68,7 +68,7 @@ export const Home = () => {
         </Link>
 
         {/* A.S.K TRAINING */}
-        <Link href="/ask" className="flex justify-center">
+        <Link href="/game" className="flex justify-center">
           <img
             src="/home/askfirst.png"
             alt="ASK Training"

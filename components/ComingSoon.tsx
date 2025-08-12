@@ -19,7 +19,7 @@ export const ComingSoon = () => {
       <div className="flex h-3/4 w-3/4">
         <div className="flex items-start justify-start flex-col lg:flex-row">
           <img src="/coming-soon/staytuned.png" alt="" className="mx-auto w-full lg:w-1/2" />
-          <img src="/coming-soon/follow.png" alt="" className="mx-auto w-full lg:w-1/2" />
+          <img src="/coming-soon/follow.png" alt="" className="mx-auto w-0 lg:w-1/2" />
         </div>
       </div>
     </div>
