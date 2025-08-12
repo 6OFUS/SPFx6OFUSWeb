@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export const Home = () => {
   return (
-    <div className="bg-[url(/bkgd2.png)] w-full min-h-screen bg-cover bg-center flex flex-col overflow-hidden">
+    <div className="bg-[url(/bkgd2.png)] w-full h-screen bg-cover bg-center flex flex-col overflow-hidden">
       
       {/* Top Half */}
-      <div className="flex flex-col lg:flex-row w-full px-4 md:px-8 pt-6 gap-4 lg:gap-0">
+      <div className="flex flex-col lg:flex-row h-1/3 px-4 md:px-8 pt-6 gap-4 lg:gap-0">
         
         {/* Left Logo + Socials */}
         <div className="flex w-full lg:w-1/3 flex-col items-center lg:items-start">
@@ -47,7 +47,7 @@ export const Home = () => {
       </div>
 
       {/* Bottom Half */}
-      <div className="flex flex-col lg:flex-row justify-center items-center px-4 md:px-6 gap-6 md:gap-14 my-10">
+      <div className="flex flex-col h-2/3 lg:flex-row justify-center items-center px-4 md:px-6 gap-6 md:gap-14 my-10">
         
         {/* SHOP THEFT */}
         <Link href="/shop-theft" className="flex justify-center">

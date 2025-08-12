@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Navbar } from './Navbar';
+import Link from "next/link";
 
 export const ASKFeedback = () => {
   const [formData, setFormData] = useState({
@@ -73,7 +74,10 @@ export const ASKFeedback = () => {
   return (
     <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden items-center justify-center">
       <Navbar />
-      <section className="w-full max-w-2xl my-40 px-4 flex flex-col justify-center items-center">
+      <Link href="/game" className='w-20 mt-32 mx:0 lg:mx-80 self-center lg:self-start'>
+        <img src="/backBtn.png" alt="Back" className="" />
+      </Link>
+      <section className="w-full max-w-2xl mb-40 px-4 flex flex-col justify-center items-center">
         <h2 className="text-3xl font-black text-pennblue mb-4 text-center">
           WE'D LOVE TO HEAR FROM YOU!
         </h2>
