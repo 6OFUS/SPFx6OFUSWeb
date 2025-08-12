@@ -78,8 +78,7 @@ export const UnityGame = () => {
           }
         }
       `}</style>
-
-      <div className="w-full h-auto flex flex-col items-center justify-center bg-[url(/oriBg.png)] bg-contain bg-top bg-center overflow-hidden px-4 py-6 relative">
+      <div className="w-screen h-screen flex flex-col items-center bg-[url(/oriBg.png)] bg-cover  bg-no-repeat bg-top bg-center overflow-hidden px-4 py-6 relative">
         <Navbar />
         <div
           id="unity-container"
@@ -111,7 +110,7 @@ export const UnityGame = () => {
         {unityInstance && !showSplash && (
           <button
             onClick={() => unityInstance.SetFullscreen(1)}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition select-none"
+            className="bg-white border-4 border-black px-10 py-2 rounded-2xl mx-auto shadow-orangeGlow my-8"
             aria-label="Go fullscreen"
           >
             Fullscreen
