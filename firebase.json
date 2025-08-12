@@ -22,6 +22,14 @@
         {
           "source": "/feedback",
           "destination": "/feedback.html"
+        },
+        {
+          "source": "/scam",
+          "destination": "/scam.html"
+        },
+        {
+          "source": "/shoptheft",
+          "destination": "/shoptheft.html"
         }
       ]
   }
