@@ -1,80 +1,70 @@
 import Link from "next/link";
+import { Navbar } from "./Navbar";
 
 export const Home = () => {
   return (
-    <div className="bg-[url(/bkgd2.png)] w-full h-screen bg-cover bg-center flex flex-col overflow-hidden">
-      
-      {/* Top Half */}
-      <div className="flex flex-col lg:flex-row h-1/3 px-4 md:px-8 pt-6 gap-4 lg:gap-0">
+    <div className="bg-[url(/bkgd2.png)] w-full h-auto md:h-screen bg-contain lg:bg-cover bg-top flex flex-col overflow-hidden">
+      <Navbar />
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-4 md:px-6 mx-4 xl:mx-52 2xl:mx-64 my-6">
         
-        {/* Left Logo + Socials */}
-        <div className="flex w-full lg:w-1/3 flex-col items-center lg:items-start">
-          <img
-            src="/coming-soon/TopLeft.png"
-            alt="Top Left Logo"
-            className="w-full"
-          />
-          <div className="flex gap-3 mt-3 lg:ml-6">
-            <Link href="https://www.instagram.com/6ofus2025/" target="_blank">
-              <img src="/ig.png" alt="Instagram" className="h-16" />
-            </Link>
-            <Link href="https://www.tiktok.com/@6ofus2025" target="_blank">
-              <img src="/tt.png" alt="TikTok" className="h-16" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Center Banner */}
-        <div className="flex w-full lg:w-1/3 items-center justify-center">
-          <Link href="/aboutus" className="flex justify-center items-center">
-            <img
-              src="/home/6ofus.png"
-              alt="6OFUS Banner"
-              className="w-2/3 md:w-1/2 lg:w-2/3"
-            />
-          </Link>
-        </div>
-
-        {/* Events Button */}
-        <div className="flex w-full lg:w-1/3 justify-center lg:justify-end items-center">
-          <Link href="/events" className="flex w-32 h-10 md:h-24 md:w-64">
-            <img
-              src="/home/eventsBtn.png"
-              alt="Events"
-            />
-          </Link>
-        </div>
-      </div>
-
-      {/* Bottom Half */}
-      <div className="flex flex-col h-2/3 lg:flex-row justify-center items-center px-4 md:px-6 gap-6 md:gap-14 my-10">
-        
-        {/* SHOP THEFT */}
-        <Link href="/shop-theft" className="flex justify-center">
-          <img
-            src="/home/pleasepaylah.png"
-            alt="Shop Theft"
-            className="w-4/5 md:w-48 lg:w-auto cursor-pointer transition-all duration-200"
-          />
-        </Link>
-
-        {/* SCAM */}
-        <Link href="/scam" className="flex justify-center">
+        {/* Scam */}
+        <div className="flex flex-col items-center text-center">
           <img
             src="/home/scam.png"
-            alt="Scam"
-            className="w-4/5 md:w-48 lg:w-auto cursor-pointer transition-all duration-200"
+            alt="Scam Character"
+            className="w-full max-w-xs md:max-w-sm object-contain"
           />
-        </Link>
+          <Link href="/scam">
+            <img 
+              src="/home/scamBtn.png" 
+              alt="Scam Button" 
+              className="w-full max-w-xs mx-auto mb-2 md:mb-4 p-2 md:p-4"
+            />
+          </Link>
+          <p className="text-base w-11/12 md:w-2/3">
+            Click to learn more about our scam VR simulator.
+          </p>
+        </div>
 
-        {/* A.S.K TRAINING */}
-        <Link href="/game" className="flex justify-center">
+        {/* About 6OFUS */}
+        <div className="flex flex-col items-center text-center">
           <img
-            src="/home/askfirst.png"
-            alt="ASK Training"
-            className="w-4/5 md:w-48 lg:w-auto cursor-pointer transition-all duration-200"
+            src="/home/about.png"
+            alt="About 6OFUS"
+            className="w-full max-w-xs md:max-w-sm object-contain"
           />
-        </Link>
+          <Link href="/aboutus">
+            <img 
+              src="/home/aboutBtn.png" 
+              alt="About Button" 
+              className="w-full max-w-xs mx-auto mb-2 md:mb-4 p-2 md:p-4"
+            />
+          </Link>
+          <p className="text-base w-11/12 md:w-2/3">
+            Click to learn more about our group.
+          </p>
+        </div>
+
+        {/* A.S.K Training */}
+        <div className="flex flex-col items-center text-center">
+          <img
+            src="/home/ask.png"
+            alt="A.S.K Training"
+            className="w-full max-w-xs md:max-w-sm object-contain"
+          />
+          <Link href="/game">
+            <img 
+              src="/home/askBtn.png" 
+              alt="ASK Button" 
+              className="w-full max-w-xs mx-auto mb-2 md:mb-4 p-2 md:p-4"
+            />
+          </Link>
+          <p className="text-base w-11/12 md:w-2/3">
+            For retail staff only! A.S.K training & test inside.
+          </p>
+        </div>
+
       </div>
     </div>
   );

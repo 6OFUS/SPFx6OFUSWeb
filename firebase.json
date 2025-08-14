@@ -30,6 +30,10 @@
         {
           "source": "/shoptheft",
           "destination": "/shoptheft.html"
+        },
+        {
+          "source": "/credits",
+          "destination": "/credits.html"
         }
       ]
   }

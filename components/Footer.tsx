@@ -28,7 +28,7 @@ export const Footer = () => {
           <div className="font-heavy">Contact us at: 6ofus2025@gmail.com</div>
           <div className="font-heavy">© 2025 6OFUS | All rights reserved</div>
           <Link
-            href="/"
+            href="/credits"
             className="font-heavy underline text-red-500 hover:text-red-700"
           >
             Credits and Acknowledgements

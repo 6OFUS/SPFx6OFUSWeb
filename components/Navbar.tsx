@@ -19,7 +19,7 @@ const dropdownData = [
   },
   {
     label: "Shop Theft",
-    items: ["About Please Pay Leh!", "Retail Safety Measures", "Consequences of Shoplifting"],
+    items: ["Retail Safety Measures", "Consequences of Shoplifting"],
   },
 ];
 
