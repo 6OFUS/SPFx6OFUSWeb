@@ -5,74 +5,70 @@ import { Navbar } from "./Navbar";
 
 export const CreditsHero = () => {
   return (
-    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden items-center justify-center">
+    <div className="bg-[url(/oriBg.png)] bg-contain bg-top bg-center flex flex-col overflow-hidden items-center justify-center">
       <Navbar />
-      <img src="credits/credits.png" alt="Credits" className="mt-28 w-5/6 md:w-1/3 max-w-full h-auto" />
-      <div className="bg-white w-4/5 rounded-3xl p-8 text-center shadow-sm">
-        <h2 className="text-[#E29B00] font-black text-lg mb-3">
+
+      <img
+        src="credits/credits.png"
+        alt="Credits"
+        className="mt-12 md:mt-28 w-5/6 md:w-1/3 max-w-full h-auto"
+      />
+
+      <div className="bg-white w-11/12 sm:w-4/5 rounded-3xl p-4 sm:p-8 text-center shadow-sm">
+        <h2 className="text-[#E29B00] font-black text-base sm:text-lg mb-3">
           Credits & Acknowledgements
         </h2>
-        <p className="text-gray-800 mx-auto">
+        <p className="text-gray-800 mx-auto text-sm sm:text-base">
           We would like to express our heartfelt thanks to all the creators, platforms, 
           and individuals who made this project possible. This page acknowledges the 
           third-party assets and tools we used in both our game and website.
         </p>
       </div>
 
-      <div className="bg-white rounded-3xl my-8 w-4/5 p-8 shadow-sm flex flex-col items-center justify-center  lg:items-start gap-8">
-        <h2 className="text-red-600 font-black text-lg m-4 self-center">Special Thanks</h2>
-        <div className="flex flex-row">
-          <img 
-            src="/credits/software.png" 
-            alt="Special Thanks Software Logos" 
-            className="max-w-md lg:max-w-lg m-8 object-contain"
+      <div className="bg-white rounded-3xl my-6 sm:my-8 w-11/12 sm:w-4/5 p-4 sm:p-8 shadow-sm flex flex-col items-center lg:items-start gap-6">
+        <h2 className="text-red-600 font-black text-base sm:text-lg self-center">
+          Special Thanks
+        </h2>
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start">
+          <img
+            src="/credits/software.png"
+            alt="Special Thanks Software Logos"
+            className="max-w-xs sm:max-w-sm md:w-1/2 m-4 sm:m-8 object-contain"
           />
-          <div className="p-8 mx-12 font-bold">
+          <div className="p-4 sm:p-8 mx-2 xl:mx-12 font-bold text-lg sm:text-base">
             <p>We would like to express our sincere gratitude to:</p>
-            <br></br>
-            <ul className="list-disc list-inside space-y-2 text-gray-800">
-              <li>
-                Ngee Ann Polytechnic for providing us with the platform, facilities, and 
-                mentorship to develop this project.
-              </li>
-              <li>
-                Our lecturers and project supervisors for their constant guidance, support, 
-                and feedback.
-              </li>
-              <li>
-                All the usability testing participants who generously offered their time to 
-                test and improve our game, your feedback was valuable.
-              </li>
-              <li>
-                The creators of public assets and tools that we relied on to bring this 
-                project to life.
-              </li>
+            <ul className="list-disc list-inside space-y-2 text-gray-800 mt-3 break-words">
+              <li>Ngee Ann Polytechnic for providing us with the platform, facilities, and mentorship.</li>
+              <li>Our lecturers and project supervisors for their guidance and support.</li>
+              <li>All usability testing participants who offered their time to improve our game.</li>
+              <li>The creators of public assets and tools that brought this project to life.</li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="bg-white my-8 rounded-3xl w-4/5 p-20 shadow-sm">
-        <h2 className="text-red-600 font-black text-lg mb-4">Tools & Platforms</h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-800">
+
+      <div className="bg-white my-6 sm:my-8 rounded-3xl w-11/12 sm:w-4/5 p-8 md:p-20 shadow-sm">
+        <h2 className="text-red-600 font-black text-base sm:text-lg mb-4">Tools & Platforms</h2>
+        <ul className="list-disc list-inside space-y-1 text-gray-800 text-sm sm:text-base break-words">
           <li>Unity – Game development engine</li>
           <li>Maya – 3D modeling and animation</li>
-          <li>Substance Painter – Texture painting and material authoring</li>
+          <li>Substance Painter – Texture painting and materials</li>
           <li>Figma – Wireframing and prototyping</li>
-          <li>Adobe Illustrator / Photoshop – UI and graphic design</li>
+          <li>Adobe Illustrator / Photoshop – UI & graphic design</li>
           <li>CapCut – Video editing</li>
-          <li>Canva – Layout design and promotional graphics</li>
-          <li>ChatGPT (OpenAI) – Writing, ideation, scripting, and documentation</li>
-          <li>GitHub – Project version control</li>
-          <li>Visual Studio Code – Code editing and debugging</li>
-          <li>React – Frontend development framework</li>
-          <li>Next.js – Web application framework</li>
-          <li>Shadcn/UI – React component library for modern UI elements</li>
-          <li>Google Gemini API – AI-generated text and idea expansion</li>
-          <li>Google Translate API Logs – Used for translation accuracy checks and language support</li>
+          <li>Canva – Layout design & promotional graphics</li>
+          <li>ChatGPT – Writing, scripting, documentation</li>
+          <li>GitHub – Version control</li>
+          <li>Visual Studio Code – Code editing</li>
+          <li>React – Frontend framework</li>
+          <li>Next.js – Web app framework</li>
+          <li>Shadcn/UI – React component library</li>
+          <li>Google Gemini API – AI-generated text</li>
+          <li>Google Translate API Logs – Translation accuracy checks</li>
         </ul>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm w-4/5 my-8 mb-16 p-20">
+      <div className="bg-white my-6 sm:my-8 rounded-3xl w-11/12 sm:w-4/5 p-8 md:p-20 shadow-sm">
         <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <h2 className="text-rojo font-black text-lg mb-4">3D Models & Assets</h2>

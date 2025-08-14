@@ -34,6 +34,10 @@
         {
           "source": "/credits",
           "destination": "/credits.html"
+        },
+        {
+          "source": "/contact",
+          "destination": "/contact.html"
         }
       ]
   }

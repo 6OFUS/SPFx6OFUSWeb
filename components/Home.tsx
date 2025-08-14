@@ -3,7 +3,7 @@ import { Navbar } from "./Navbar";
 
 export const Home = () => {
   return (
-    <div className="bg-[url(/bkgd2.png)] w-full h-auto md:h-screen bg-contain lg:bg-cover bg-top flex flex-col overflow-hidden">
+    <div className="bg-[url(/bkgd2.png)] w-full h-auto md:h-screen bg-contain md:bg-cover bg-top flex flex-col overflow-hidden">
       <Navbar />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-4 md:px-6 mx-4 xl:mx-52 2xl:mx-64 my-6">

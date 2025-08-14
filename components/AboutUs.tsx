@@ -4,10 +4,10 @@ import { Navbar } from "./Navbar";
 
 export const AboutUs = () => {
   return (
-    <div className="bg-[url(/bkgd2.png)] w-full h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden font-heavitas">
+    <div className="bg-[url(/bkgd2.png)] w-full h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden">
       <Navbar />
 
-      <div className="w-11/12 flex flex-col items-center m-8 py-10 sm:py-20 mx-auto">
+      <div className="w-11/12 flex flex-col items-center m-8 py-10 sm:py-20 mx-auto font-heavitas">
         <img
           className="my-10 sm:my-20 w-full max-w-4xl"
           src="/aboutus/6ofusbanner.png"
@@ -21,7 +21,7 @@ export const AboutUs = () => {
       </div>
 
       <div
-        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue"
+        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas font-heavitas"
         data-aos="fade-up"
       >
         About 6OFUS
@@ -51,7 +51,7 @@ export const AboutUs = () => {
       </div>
 
       <div
-        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue my-12 sm:my-24"
+        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas my-12 sm:my-24 font-heavitas"
         data-aos="fade-up"
       >
         <div className="flex flex-col md:flex-row gap-8">
@@ -75,7 +75,7 @@ export const AboutUs = () => {
       </div>
 
       <div
-        className="w-11/12 px-4 sm:px-8 my-12 sm:my-20 flex flex-col justify-center items-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue"
+        className="w-11/12 px-4 sm:px-8 my-12 sm:my-20 flex flex-col justify-center items-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas"
         data-aos="fade-up"
       >
         Meet The Team
@@ -95,7 +95,7 @@ export const AboutUs = () => {
       </div>
 
       <div
-        className="w-11/12 px-4 sm:px-8 my-20 flex flex-col md:flex-row gap-8 justify-center items-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue"
+        className="w-11/12 px-4 sm:px-8 my-20 flex flex-col md:flex-row gap-8 justify-center items-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas"
         data-aos="fade-up"
       >
         {/* Instagram Embed */}
@@ -114,7 +114,7 @@ export const AboutUs = () => {
               Like & share to help others stay alert.
             </div>
           </div>
-          <div className="text-xl sm:text-3xl text-center font-extralight my-8 sm:my-16 p-6 sm:p-10 bg-yellow-200 text-pennblue outline rounded-3xl">
+          <div className="text-xl sm:text-3xl text-center font-extralight my-8 sm:my-16 p-6 sm:p-10 bg-yellow-200 text-pennblue font-heavitas outline rounded-3xl">
             Follow our Journey
             <div className="text-sm sm:text-base font-richblack mt-4 sm:mt-10">
               Join us behind the scenes, from storyboards to 3D models, and see what student creators can do!
