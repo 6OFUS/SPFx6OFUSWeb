@@ -46,10 +46,10 @@ export const Contact = () => {
 
       emailjs
       .send(
-        "service_a655z5s",   // Service ID
-        'template_fz2pkg9',  // Template ID
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,   // Service ID
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,  // Template ID
         formData,
-        "_Rdb2Sc0PuoYwfjIg"    // Public Key
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!    // Public Key
       )
       .then(() => {
         alert('Thanks for your feedback!');
@@ -120,7 +120,7 @@ export const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Message?"
+            placeholder="Message"
             className="w-full border-black border-4 rounded-3xl px-4 py-2 h-24 shadow-orangeGlow"
           />
 
