@@ -38,6 +38,14 @@
         {
           "source": "/contact",
           "destination": "/contact.html"
+        },
+        {
+          "source": "/whyaskmatters",
+          "destination": "/whyaskmatters.html"
+        },
+        {
+          "source": "/coming-soon",
+          "destination": "/coming-soon.html"
         }
       ]
   }

@@ -18,7 +18,7 @@ const dropdownData = [
     label: "A.S.K Training",
     items: [
       { label: "A.S.K First Training Game", href: "/game" },
-      { label: "Why A.S.K Matters?", href: "" },
+      { label: "Why A.S.K Matters?", href: "/whyaskmatters" },
     ],
   },
   {
