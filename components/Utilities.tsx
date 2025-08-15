@@ -23,7 +23,7 @@ export const Utilities = () => {
   const [userMessage, setUserMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [isDyslexic, setIsDyslexic] = useState(false);
-  const { textSize, setTextSize } = useTextSize();
+  const { setTextSize } = useTextSize();
 
   // Load saved preference on mount
   useEffect(() => {

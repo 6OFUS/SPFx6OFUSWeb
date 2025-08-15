@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const ShopTheftHero = () => {
   return (
-    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden items-center justify-center">
+    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top flex flex-col overflow-hidden items-center justify-center">
       
       <div className="text-center md:text-left flex flex-col md:flex-row md:space-x-4 w-full md:w-2/3 justify-start items-center mt-4 px-4">
         <img src="ask/asklogo.png" alt="ASK First Logo" className="w-1/3 md:w-1/6 max-w-full h-auto" />

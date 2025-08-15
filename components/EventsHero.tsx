@@ -2,7 +2,7 @@ import { Navbar } from "./Navbar";
 
 export const EventsHero = () => {
   return (
-    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden">
+    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-center flex flex-col overflow-hidden">
       <Navbar />
       <div className="w-full lg:w-1/2 flex py-10 flex-col justify-center mx-auto">
         <img className="mx-8 my-28 flex" src="/events/eventsFlyer.png" alt="Events Flyer"/>

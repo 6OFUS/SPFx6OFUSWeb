@@ -5,7 +5,7 @@ import { Navbar } from "./Navbar";
 
 export const CreditsHero = () => {
   return (
-    <div className="bg-[url(/oriBg.png)] bg-contain bg-top bg-center flex flex-col overflow-hidden items-center justify-center">
+    <div className="bg-[url(/oriBg.png)] bg-contain bg-top flex flex-col overflow-hidden items-center justify-center">
       <Navbar />
 
       <img

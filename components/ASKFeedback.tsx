@@ -72,7 +72,7 @@ export const ASKFeedback = () => {
   };
 
   return (
-    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden items-center justify-center">
+    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top flex flex-col overflow-hidden items-center justify-center">
       <Navbar />
       <Link href="/game" className='w-20 mt-32 mx:0 lg:mx-80 self-center lg:self-start'>
         <img src="/backBtn.png" alt="Back" className="" />

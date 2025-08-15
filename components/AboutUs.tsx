@@ -4,7 +4,7 @@ import { Navbar } from "./Navbar";
 
 export const AboutUs = () => {
   return (
-    <div className="bg-[url(/bkgd2.png)] w-full h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden">
+    <div className="bg-[url(/bkgd2.png)] w-full h-auto bg-contain bg-top flex flex-col overflow-hidden">
       <Navbar />
 
       <div className="w-11/12 flex flex-col items-center m-8 py-10 sm:py-20 mx-auto font-heavitas">
@@ -21,7 +21,7 @@ export const AboutUs = () => {
       </div>
 
       <div
-        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas font-heavitas"
+        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas"
         data-aos="fade-up"
       >
         About 6OFUS
@@ -51,7 +51,7 @@ export const AboutUs = () => {
       </div>
 
       <div
-        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas my-12 sm:my-24 font-heavitas"
+        className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue my-12 sm:my-24 font-heavitas"
         data-aos="fade-up"
       >
         <div className="flex flex-col md:flex-row gap-8">

@@ -97,7 +97,7 @@ export const UnityGame = () => {
           }
         }
       `}</style>
-      <div className="w-screen h-auto flex flex-col items-center bg-[url(/oriBg.png)] bg-cover bg-top bg-center overflow-hidden px-4 py-6 relative">
+      <div className="w-screen h-auto flex flex-col items-center bg-[url(/oriBg.png)] bg-cover bg-top overflow-hidden px-4 py-6 relative">
         <Navbar />
         <div
           id="unity-container"
