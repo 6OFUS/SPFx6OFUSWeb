@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
+import { useTextSize } from "@/components/context/TextSizeContext";
 
 interface Message {
   sender: "user" | "bot";
@@ -21,9 +22,34 @@ export const Utilities = () => {
   const [conversation, setConversation] = useState<Message[]>([]);
   const [userMessage, setUserMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isDyslexic, setIsDyslexic] = useState(false);
+  const { textSize, setTextSize } = useTextSize();
+
+  // Load saved preference on mount
+  useEffect(() => {
+    const saved = localStorage.getItem("dyslexicFont");
+    if (saved === "true") {
+      setIsDyslexic(true);
+      document.body.classList.add("font-opendyslexic");
+    }
+  }, []);
+
+  // Toggle handler
+  const handleToggle = () => {
+    const newState = !isDyslexic;
+    setIsDyslexic(newState);
+    localStorage.setItem("dyslexicFont", String(newState));
+
+    if (newState) {
+      document.body.classList.add("font-opendyslexic");
+    } else {
+      document.body.classList.remove("font-opendyslexic");
+    }
+  };
 
   const settingsData = [
-    { label: "Inclusive Settings", items: ["Language", "Accessibility Options"] },
+    { label: "Language", items: ["English", "Chinese", "Malay", "Tamil"], icon: "/utilities/languageIcon.png",},
+    { label: "Text Size", items: ["Small", "Medium", "Large", "Extra Large"], icon: "/utilities/textSizeIcon.png",}
   ];
 
   async function fetchGeminiResponse(history: Message[]) {
@@ -268,28 +294,58 @@ export const Utilities = () => {
       {settingsOpen && (
         <div className="fixed font-nexa bottom-24 right-[7.5rem] shadow-lg z-40 bg-[#FFD475] border-8 border-earthy rounded-3xl p-8 w-72 space-y-4 hidden lg:block">
           {settingsData.map((dropdown, index) => (
-            <div key={index}>
-              <div
-                className="bg-white rounded-full flex items-center justify-between px-4 py-2 border-4 border-earthy cursor-pointer"
-                onClick={() => toggleDropdown(index)}
-              >
-                <span className="text-sm font-bold text-gray-800">{dropdown.label}</span>
-                <ChevronDown className="w-4 h-4 text-gray-600" />
-              </div>
-              {openDropdownIndex === index && dropdown.items.length > 0 && (
-                <div className="mt-2 space-y-2">
-                  {dropdown.items.map((item, subIndex) => (
-                    <div
-                      key={subIndex}
-                      className="bg-yellow-100 rounded-3xl px-4 py-2 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer"
-                    >
-                      {item}
-                    </div>
-                  ))}
+            <div key={index} className="flex">
+              <img src={dropdown.icon} className="w-1/3 h-1/3 mr-3" />
+              <div className="flex flex-col justify-center items-center w-full">
+                <div
+                  className="bg-white rounded-full flex items-center justify-between px-4 py-2 border-4 border-earthy cursor-pointer w-full"
+                  onClick={() => toggleDropdown(index)}
+                >
+                  <span className="text-sm font-bold text-gray-800">{dropdown.label}</span>
+                  <ChevronDown className="w-4 h-4 text-gray-600" />
                 </div>
-              )}
+
+                {openDropdownIndex === index && dropdown.items.length > 0 && (
+                  <div className="mt-2 space-y-2 w-full">
+                    {dropdown.items.map((item, subIndex) => (
+                      <div
+                        key={subIndex}
+                        className="bg-yellow-100 rounded-3xl px-4 py-2 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer"
+                        onClick={() => {
+                          // Only handle Text Size dropdown
+                          if (dropdown.label === "Text Size") {
+                            const size = item.toLowerCase().replace(" ", "") as "small" | "medium" | "large" | "extralarge";
+                            setTextSize(size); // update context
+                            localStorage.setItem("textSize", size); // optional: persist
+                          }
+                        }}
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
+
+          <label className="flex items-center cursor-pointer">
+            <img src="/utilities/dyslexicFontIcon.png" className="w-1/3 h-1/3 mr-3" />
+            <div className="relative">
+              <input
+                type="checkbox"
+                checked={isDyslexic}
+                onChange={handleToggle}
+                className="sr-only"
+              />
+              <div className="block w-14 h-8 rounded-full bg-gray-600"></div>
+              <div
+                className={`dot absolute left-1 top-1 w-6 h-6 rounded-full bg-white transition ${
+                  isDyslexic ? "translate-x-6" : ""
+                }`}
+              ></div>
+            </div>
+          </label>
         </div>
       )}
     </>

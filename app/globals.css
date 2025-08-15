@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-size-small {
+  font-size: 14px;
+}
+
+.text-size-medium {
+  font-size: 16px;
+}
+
+.text-size-large {
+  font-size: 20px;
+}
+
+.text-size-extralarge {
+  font-size: 24px;
+}
+
 /* *=========== Default theme =========== */
 @layer base {
   :root {
@@ -74,6 +90,36 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Font utility classes */
+.font-opendyslexic {
+  font-family: var(--font-opendyslexic), sans-serif !important;
+}
+
+.font-nexa {
+  font-family: var(--font-nexa), sans-serif;
+}
+
+.font-heavitas {
+  font-family: var(--font-heavitas), sans-serif;
+}
+
+.font-komikax {
+  font-family: var(--font-komikax), sans-serif;
+}
+
+/* OpenDyslexic override for all elements when body has the class */
+body.font-opendyslexic * {
+  font-family: var(--font-opendyslexic), sans-serif !important;
+}
+
+/* Ensure OpenDyslexic applies to all font classes when active */
+body.font-opendyslexic .font-nexa,
+body.font-opendyslexic .font-heavitas,
+body.font-opendyslexic .font-komikax,
+body.font-opendyslexic .font-sans {
+  font-family: var(--font-opendyslexic), sans-serif !important;
 }
 
 /* HeroCards background shadow */

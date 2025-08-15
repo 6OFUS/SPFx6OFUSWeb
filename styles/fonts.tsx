@@ -16,3 +16,8 @@ export const fontKomikax = {
   variable: "--font-komikax",
   className: "font-komikax",
 };
+
+export const fontOpenDyslexic = {
+  variable: "--font-opendyslexic",
+  className: "font-opendyslexic",
+};

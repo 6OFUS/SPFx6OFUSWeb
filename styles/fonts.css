@@ -2,6 +2,7 @@
   --font-nexa: 'Nexa';
   --font-heavitas: 'Heavitas';
   --font-komikax: 'Komikax';
+  --font-opendyslexic: 'OpenDyslexic';
 }
 
 @font-face {
@@ -126,6 +127,13 @@
 @font-face {
   font-family: 'Komikax';
   src: url('/fonts/KOMIKAX_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
