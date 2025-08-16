@@ -32,9 +32,9 @@ export const ScamConsequences = () => {
         </Link>
       </div>
       <div className="mb-32 bg-white rounded-3xl border-8 py-12 px-4 lg:px-24 border-black w-5/6 mx-auto shadow-sm font-nexa justify-center items-center flex flex-col space-y-8">
-        <div className="flex flex-col md:flex-row justify-center items-center text-lg lg:text-xl w-2/3 space-x-16">
-          <img src="consequences/money.png" alt="" className="w-4/5 md:w-1/6 h-auto flex" />
-          <h2 className="font-bold"><p className="font-black">Scam Consequences: Don’t Be a Money Mule</p><br></br>Why Helping Scammers Puts You at Risk?
+        <div className="flex flex-col md:flex-row justify-center items-center text-lg lg:text-xl">
+          <img src="consequences/money.png" alt="" className="w-4/5 md:w-1/6 h-auto flex m-4 lg:m-16" />
+          <h2 className="font-bold mx-4"><p className="font-black">Scam Consequences: Don’t Be a Money Mule</p><br></br>Why Helping Scammers Puts You at Risk?
           </h2>
         </div>
         <div className="bg-[#FFD475] border-4 border-black rounded-3xl p-1 lg:p-10 flex flex-col xl:flex-row gap-6 w-11/12">

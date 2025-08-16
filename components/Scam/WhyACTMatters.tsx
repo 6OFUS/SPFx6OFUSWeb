@@ -33,7 +33,7 @@ export const WhyACTMatters = () => {
       </div>
       <div className="mb-32 bg-white rounded-3xl border-8 py-12 px-4 lg:px-24 border-black w-5/6 mx-auto shadow-sm font-nexa justify-center items-center flex flex-col space-y-16">
         <div className="flex flex-col xl:flex-row justify-center items-center text-lg lg:text-xl">
-          <img src="why/scammer.png" alt="" className="w-4/5 md:w-1/6 p-8 h-auto flex" />
+          <img src="why/scammer.png" alt="" className="w-4/5 lg:w-1/6 p-8 h-auto flex" />
           <h2 className="font-bold"><p className="font-black">Why A.C.T. Matters?</p><br></br>A.C.T. matters because scams can target anyone, and quick action can stop them. By adding ScamShield, checking suspicious messages, and telling the authorities, you protect yourself and help prevent others from becoming victims. Together, these steps build a safer, scam-smart community.
           </h2>
         </div>

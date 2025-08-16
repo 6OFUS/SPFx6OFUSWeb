@@ -25,7 +25,7 @@ const dropdownData = [
     label: "Scam",
     items: [
       { label: "About Aiyoh! Fake One!", href: "/scam/about" },
-      { label: "Why A.C.T. Matters?", href: "/scam/why-act" },
+      { label: "Why A.C.T. Matters?", href: "/scam/why" },
       { label: "Scam Consequences", href: "/scam/consequences" },
       { label: "Steps to Take After Being Scammed", href: "/scam/steps" },
     ],
