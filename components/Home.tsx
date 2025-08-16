@@ -6,7 +6,7 @@ export const Home = () => {
     <div className="bg-[url(/bkgd2.png)] w-full h-auto min-h-screen bg-contain md:bg-cover bg-top flex flex-col overflow-hidden">
       <Navbar />
 
-      <div className="w-screen max-h-screen grid grid-cols-1 md:grid-cols-3 py-12 lg:py-24 px-12 xl:px-64">
+      <div className="w-screen grid grid-cols-1 md:grid-cols-3 py-12 lg:py-24 px-12 xl:px-64">
         <div className="flex flex-col items-center text-center group">
           <Link href="/scam" className="flex flex-col items-center">
             <img

@@ -1,11 +1,11 @@
-import { ScamHero } from "@/components/Scam/ScamHero";
 import { Utilities } from "@/components/Utilities";
+import { ScamConsequences } from "@/components/Scam/ScamConsequences";
 
 export default function ScamPage() {
   return (
     <>
       <Utilities />
-      <ScamHero />
+      <ScamConsequences />
     </>
   );
 }

@@ -48,7 +48,7 @@ export const Utilities = () => {
   };
 
   const settingsData = [
-    { label: "Language", items: ["English", "Chinese", "Malay", "Tamil"], icon: "/utilities/languageIcon.png",},
+    // { label: "Language", items: ["English", "Chinese", "Malay", "Tamil"], icon: "/utilities/languageIcon.png",},
     { label: "Text Size", items: ["Small", "Medium", "Large", "Extra Large"], icon: "/utilities/textSizeIcon.png",}
   ];
 
@@ -215,28 +215,48 @@ export const Utilities = () => {
         <div className="fixed inset-0 bg-[#FFD475] z-[100] flex flex-col items-center justify-start m-7 p-3 rounded-3xl border-8 border-earthy overflow-y-auto lg:hidden">
           <img src="/setting.png" alt="Settings Logo" className="lg:h-20 h-16 self-end flex mb-8" />
           {settingsData.map((dropdown, index) => (
-            <div key={index} className="w-full max-w-md mb-4 px-6">
-              <div
-                className="bg-white rounded-full flex items-center justify-between px-4 py-3 border-4 border-earthy cursor-pointer"
-                onClick={() => toggleDropdown(index)}
-              >
-                <span className="text-base font-bold text-gray-800">{dropdown.label}</span>
-                <ChevronDown className="w-5 h-5 text-gray-600" />
-              </div>
-              {openDropdownIndex === index && dropdown.items.length > 0 && (
-                <div className="mt-2 space-y-2">
-                  {dropdown.items.map((item, subIndex) => (
-                    <div
-                      key={subIndex}
-                      className="bg-yellow-100 rounded-3xl px-4 py-3 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer"
-                    >
-                      {item}
-                    </div>
-                  ))}
+            <div key={index} className="w-full max-w-md mb-4 px-6 flex justify-between space-x-4">
+              <img src={dropdown.icon} alt={`${dropdown.label} Icon`} className="h-16 w-16 mr-2" />
+              <div className="w-full">
+                <div
+                  className="bg-white rounded-full w-full flex items-center justify-between px-4 py-3 border-4 border-earthy cursor-pointer"
+                  onClick={() => toggleDropdown(index)}
+                >
+                  <span className="text-base font-bold text-gray-800">{dropdown.label}</span>
+                  <ChevronDown className="w-5 h-5 text-gray-600" />
                 </div>
-              )}
+                {openDropdownIndex === index && dropdown.items.length > 0 && (
+                  <div className="mt-2 space-y-2">
+                    {dropdown.items.map((item, subIndex) => (
+                      <div
+                        key={subIndex}
+                        className="bg-yellow-100 rounded-3xl px-4 py-3 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
+          <label className="w-full max-w-md mb-4 px-6 flex items-center space-x-4 cursor-pointer">
+            <img src="/utilities/dyslexicFontIcon.png" className="h-16 w-16 mr-2" />
+            <div className="relative">
+              <input
+                type="checkbox"
+                checked={isDyslexic}
+                onChange={handleToggle}
+                className="sr-only"
+              />
+              <div className="block w-14 h-8 rounded-full bg-gray-600"></div>
+              <div
+                className={`dot absolute left-1 top-1 w-6 h-6 rounded-full bg-white transition ${
+                  isDyslexic ? "translate-x-6" : ""
+                }`}
+              ></div>
+            </div>
+          </label>
         </div>
       )}
 
@@ -295,7 +315,7 @@ export const Utilities = () => {
         <div className="fixed font-nexa bottom-24 right-[7.5rem] shadow-lg z-40 bg-[#FFD475] border-8 border-earthy rounded-3xl p-8 w-72 space-y-4 hidden lg:block">
           {settingsData.map((dropdown, index) => (
             <div key={index} className="flex">
-              <img src={dropdown.icon} className="w-1/3 h-1/3 mr-3" />
+              <img src={dropdown.icon} alt={`${dropdown.label} Icon`} className="w-1/3 h-1/3 mr-3" />
               <div className="flex flex-col justify-center items-center w-full">
                 <div
                   className="bg-white rounded-full flex items-center justify-between px-4 py-2 border-4 border-earthy cursor-pointer w-full"

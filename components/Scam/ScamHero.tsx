@@ -1,25 +1,45 @@
 'use client';
 
 import Link from "next/link";
-import { Navbar } from "./Navbar";
-import { InstagramEmbed } from "./InstagramEmbed";
+import { Navbar } from "../Navbar";
+import { InstagramEmbed } from "../InstagramEmbed";
 
 export const ScamHero = () => {
   return (
-    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top bg-center flex flex-col overflow-hidden items-center justify-center font-heavitas">
+    <div className="bg-[url(/oriBg.png)] h-auto bg-contain bg-top flex flex-col overflow-hidden items-center justify-center font-heavitas">
       <Navbar />
       <img src="home/scam.png" alt="ASK First Logo" className="w-1/3 md:w-1/6 max-w-full mt-20 h-auto" />
       <img src="scam/scamshieldDesktop.png" alt="Scam Shield Suite" className="w-full md:w-5/6 max-w-full my-10 h-auto" />
-      <p className="text-center w-2/5 text-lg font-medium">
+      <p className="text-center w-2/5 text-lg font-extralight">
         Aiyoh! Fake One! is a VR scam awareness simulation game specially created for the Singapore Police Force roadshows. It is not available for download online.
         <br></br><br></br>
         Follow us on our social media to find out when and where the next roadshows will be!
       </p>
-      <div className="flex">
-        <img src="scam/about.png" alt="About" className="w-full md:w-5/6 max-w-full my-20 h-auto" />
-        <img src="scam/whyACT.png" alt="Why ACT Matters" className="w-full md:w-5/6 max-w-full my-20 h-auto" />
-        <img src="scam/consequences.png" alt="Consequence" className="w-full md:w-5/6 max-w-full my-20 h-auto" />
-        <img src="scam/steps.png" alt="Steps to take prior to being scammed" className="w-full md:w-5/6 max-w-full my-20 h-auto" />
+      <div className="flex space-x-20 my-10">
+        <Link href="/scam/about" className="h-auto flex hover:scale-105 transition-transform duration-300">
+          <img
+            src="/scam/about.png"
+            alt=""
+          />
+        </Link>
+        <Link href="/scam/why" className="h-auto flex hover:scale-105 transition-transform duration-300">
+          <img
+            src="/scam/whyActive.png"
+            alt=""
+        />
+        </Link>
+        <Link href="/scam/consequences" className="h-auto flex hover:scale-105 transition-transform duration-300">
+          <img
+            src="/scam/consequences.png"
+            alt=""
+          />
+        </Link>
+        <Link href="/scam/steps" className="h-auto flex hover:scale-105 transition-transform duration-300">
+          <img
+            src="/scam/steps.png"
+            alt=""
+          />
+        </Link>
       </div>
       <div
         className="w-11/12 px-4 sm:px-8 my-20 flex flex-col md:flex-row gap-8 justify-center items-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue"

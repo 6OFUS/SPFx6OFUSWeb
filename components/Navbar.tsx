@@ -48,7 +48,7 @@ export const Navbar = () => {
     setOpenIndex(openIndex === index ? null : index);
 
   return (
-    <div className="sticky top-0 z-50 bg-opacity-90 h-32 w-full flex flex-row px-8 pt-6">
+    <div className="sticky top-0 z-50 bg-opacity-90 h-32 w-full flex flex-row px-8 pt-6 font-heavitas">
       <div className="flex w-full xl:mt-20 lg:mt-10 mt-0 lg:w-1/3 lg:order-1 order-2 flex-col lg:items-start items-center justify-center">
         <img src="/coming-soon/TopLeft.png" alt="Top Left Logo" className="md:w-2/3 w-full" />
         <div className="hidden lg:flex gap-3 ml-0 lg:ml-6 w-1/3 items-start lg:items-center">
