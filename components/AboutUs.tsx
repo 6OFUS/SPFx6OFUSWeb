@@ -59,7 +59,7 @@ export const AboutUs = () => {
             <img
               src="/aboutus/6ofusCD.png"
               alt="6OFUS"
-              className="w-2/3 sm:w-3/5"
+              className="w-2/3 sm:w-3/5 transition-transform duration-300 hover:scale-110 hover:animate-bounce"
             />
           </div>
           <div className="w-full md:w-1/2 text-left text-sm sm:text-base font-extralight flex flex-col justify-center">
@@ -85,12 +85,12 @@ export const AboutUs = () => {
           className="w-2/3 sm:w-1/3 my-10 sm:my-20"
         />
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-16 max-w-6xl mx-auto">
-          <img src="/aboutus/huihui.png" alt="huihui" />
-          <img src="/aboutus/malcom.png" alt="malcom" />
-          <img src="/aboutus/jenn.png" alt="jennifer" />
-          <img src="/aboutus/kevin.png" alt="kevin" />
-          <img src="/aboutus/alfred.png" alt="alfred" />
-          <img src="/aboutus/rayn.png" alt="rayn" />
+          <img src="/aboutus/huihui.png" alt="huihui" className="transition-transform duration-300 hover:scale-105"/>
+          <img src="/aboutus/malcom.png" alt="malcom" className="transition-transform duration-300 hover:scale-105"/>
+          <img src="/aboutus/jenn.png" alt="jennifer" className="transition-transform duration-300 hover:scale-105"/>
+          <img src="/aboutus/kevin.png" alt="kevin" className="transition-transform duration-300 hover:scale-105"/>
+          <img src="/aboutus/alfred.png" alt="alfred" className="transition-transform duration-300 hover:scale-105"/>
+          <img src="/aboutus/rayn.png" alt="rayn" className="transition-transform duration-300 hover:scale-105"/>
         </div>
       </div>
 
