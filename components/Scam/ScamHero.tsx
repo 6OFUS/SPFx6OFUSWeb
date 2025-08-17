@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Navbar } from "../Navbar";
 import { InstagramEmbed } from "../InstagramEmbed";
+import TranslatableText from "../TranslatableText";
 
 export const ScamHero = () => {
   return (
@@ -12,9 +13,13 @@ export const ScamHero = () => {
       <img src="scam/scamshieldDesktop.png" alt="Scam Shield Suite" className="w-full md:w-5/6 my-10 h-auto hidden lg:flex" />
       <img src="scam/scamshieldMobile.png" alt="Scam Shield Suite" className="w-full md:w-5/6 my-10 h-auto flex lg:hidden" />
       <p className="text-center w-5/6 lg:w-2/5 text-lg font-extralight">
-        Aiyoh! Fake One! is a VR scam awareness simulation game specially created for the Singapore Police Force roadshows. It is not available for download online.
+        <TranslatableText>
+          Aiyoh! Fake One! is a VR scam awareness simulation game specially created for the Singapore Police Force roadshows. It is not available for download online.
+        </TranslatableText>
         <br></br><br></br>
-        Follow us on our social media to find out when and where the next roadshows will be!
+        <TranslatableText>
+          Follow us on our social media to find out when and where the next roadshows will be!
+        </TranslatableText>
       </p>
       <div className="flex flex-col lg:flex-row my-10 space-y-4 lg:space-y-0">
         <Link href="/scam/about" className="h-auto flex hover:scale-105 transition-transform duration-300 mx-10">
@@ -55,17 +60,23 @@ export const ScamHero = () => {
 
         <div className="flex flex-col w-full md:w-1/2 justify-center items-center">
           <div className="text-2xl sm:text-5xl text-center font-extralight">
-            Aiyoh! Don't Kena Scam Leh!
+            <TranslatableText>Aiyoh! Don't Kena Scam Leh!</TranslatableText>
             <div className="text-sm sm:text-base font-richblack mt-6">
-              Watch our scam parody music video created for #YAS2025.
+              <TranslatableText>
+                Watch our scam parody music video created for #YAS2025.
+              </TranslatableText>
               <br />
-              Like & share to help others stay alert.
+              <TranslatableText>
+                Like & share to help others stay alert.
+              </TranslatableText>
             </div>
           </div>
           <div className="text-xl sm:text-3xl text-center font-extralight my-8 sm:my-16 p-6 sm:p-10 bg-yellow-200 text-pennblue outline rounded-3xl">
-            Follow our Journey
+            <TranslatableText>Follow our Journey</TranslatableText>
             <div className="text-sm sm:text-base font-richblack mt-4 sm:mt-10">
-              Join us behind the scenes, from storyboards to 3D models, and see what student creators can do!
+              <TranslatableText>
+                Join us behind the scenes, from storyboards to 3D models, and see what student creators can do!
+              </TranslatableText>
             </div>
             <div className="flex gap-8 sm:gap-16 mt-6 items-center justify-center">
               <Link href="https://www.instagram.com/6ofus2025/" target="_blank">
@@ -79,7 +90,7 @@ export const ScamHero = () => {
         </div>
       </div>
       <div className="w-full text-2xl sm:text-5xl text-center justify-center items-center flex flex-col text-pennblue font-extralight my-20" data-aos="fade-up">
-        What is A.C.T.?
+        <TranslatableText>What is A.C.T.?</TranslatableText>
         <div className="w-5/6 lg:w-2/3 my-10">
             <div className="relative" style={{ paddingTop: "56.25%" }}>
                 <iframe className="absolute top-0 left-0 w-full h-full rounded-3xl"

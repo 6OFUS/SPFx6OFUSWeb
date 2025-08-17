@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Navbar } from './Navbar';
 import emailjs from 'emailjs-com';
+import TranslatableText from './TranslatableText';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -76,16 +77,16 @@ export const Contact = () => {
       <Navbar />
       <section className="w-full max-w-5xl my-40 px-4 flex flex-col justify-center items-center">
         <h2 className="text-3xl font-black text-pennblue mb-4 text-center">
-          WE'D LOVE TO HEAR FROM YOU!
+          <TranslatableText>WE'D LOVE TO HEAR FROM YOU!</TranslatableText>
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-4 md:space-y-0 md:space-x-4">
           <img src="ask/hhThumbsUp.png" alt="Game Info" className="w-1/2 md:w-1/3 max-w-full h-auto" />
           <h2 className="text-lg md:text-xl font-extrabold my-6">
-            Got a question? Want to collab? Or just want to say “Aiyoh, Fake One!” with us? 😆
+            <TranslatableText>Got a question? Want to collab? Or just want to say “Aiyoh, Fake One!” with us? 😆</TranslatableText>
             <br></br><br></br>
-            Fill in the form below or email us — either way, we’ll get back to you faster than a scammer can type “Hello, dear…” 🕵️‍♂️
+            <TranslatableText>Fill in the form below or email us — either way, we’ll get back to you faster than a scammer can type “Hello, dear…” 🕵️‍♂️</TranslatableText>
             <br></br><br></br>
-            📧 Email us at: 6ofus2025@gmail.com
+            <TranslatableText>📧 Email us at: 6ofus2025@gmail.com</TranslatableText>
           </h2>
         </div>
 
@@ -131,7 +132,7 @@ export const Contact = () => {
               submitting ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
-            {submitting ? 'Submitting...' : 'Submit'}
+            <TranslatableText>{submitting ? 'Submitting...' : 'Submit'}</TranslatableText>
           </button>
         </form>
       </section>

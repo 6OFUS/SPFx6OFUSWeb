@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { InstagramEmbed } from "./InstagramEmbed";
 import { Navbar } from "./Navbar";
+import TranslatableText from "./TranslatableText";
 
 export const AboutUs = () => {
   return (
@@ -24,20 +25,32 @@ export const AboutUs = () => {
         className="w-11/12 px-4 sm:px-8 flex flex-col justify-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas"
         data-aos="fade-up"
       >
-        About 6OFUS
+        <TranslatableText>About 6OFUS</TranslatableText>
         <div className="flex flex-col md:flex-row gap-8 my-12 sm:my-24">
           <div className="w-full md:w-1/2 text-left text-sm sm:text-base font-extralight flex flex-col justify-center">
-            <div className="text-rojo text-2xl sm:text-4xl">Who We Are</div>
+            <div className="text-rojo text-2xl sm:text-4xl">
+              <TranslatableText>Who We Are</TranslatableText>
+            </div>
             <p className="mt-6">
-              We’re 6OFUS, a passionate student team from Ngee Ann Polytechnic’s School of ICT, currently pursuing our Diploma in Immersive Media.
+              <TranslatableText>
+                We’re 6OFUS, a passionate student team from Ngee Ann Polytechnic’s School of ICT, currently pursuing our Diploma in Immersive Media.
+              </TranslatableText>
             </p>
-            <p className="mt-4">Our team is made up of:</p>
+            <p className="mt-4">
+              <TranslatableText>Our team is made up of:</TranslatableText>
+            </p>
             <ul className="list-disc ml-6">
-              <li>3 Developers (3DEV)</li>
-              <li>3 Designers (3DES)</li>
+              <li>
+                <TranslatableText>3 Developers (3DEV)</TranslatableText>
+              </li>
+              <li>
+                <TranslatableText>3 Designers (3DES)</TranslatableText>
+              </li>
             </ul>
             <p className="mt-4">
-              Together, we combine code and creativity to create meaningful, immersive experiences that engage, educate, and empower.
+              <TranslatableText>
+                Together, we combine code and creativity to create meaningful, immersive experiences that engage, educate, and empower.
+              </TranslatableText>
             </p>
           </div>
           <div className="flex w-full md:w-1/2 justify-center items-center">
@@ -63,12 +76,18 @@ export const AboutUs = () => {
             />
           </div>
           <div className="w-full md:w-1/2 text-left text-sm sm:text-base font-extralight flex flex-col justify-center">
-            <div className="text-rojo text-2xl sm:text-4xl">Our Mission</div>
+            <div className="text-rojo text-2xl sm:text-4xl">
+              <TranslatableText>Our Mission</TranslatableText>
+            </div>
             <p className="mt-6">
-              We create interactive games and simulations that help retail staff and the public learn how to spot scams and stop shop theft.
+              <TranslatableText>
+                We create interactive games and simulations that help retail staff and the public learn how to spot scams and stop shop theft.
+              </TranslatableText>
             </p>
             <p className="mt-4">
-              Because we believe learning should be practical, engaging, and even a little fun.
+              <TranslatableText>
+                Because we believe learning should be practical, engaging, and even a little fun.
+              </TranslatableText>
             </p>
           </div>
         </div>
@@ -78,7 +97,7 @@ export const AboutUs = () => {
         className="w-11/12 px-4 sm:px-8 my-12 sm:my-20 flex flex-col justify-center items-center font-bold text-3xl sm:text-4xl mx-auto text-center text-pennblue font-heavitas"
         data-aos="fade-up"
       >
-        Meet The Team
+        <TranslatableText>Meet The Team</TranslatableText>
         <img
           src="/aboutus/3Des3Dev.png"
           alt="3des3dev"
@@ -107,17 +126,23 @@ export const AboutUs = () => {
 
         <div className="flex flex-col w-full md:w-1/2 justify-center items-center">
           <div className="text-2xl sm:text-5xl text-center font-extralight">
-            Aiyoh! Don't Kena Scam Leh!
+            <TranslatableText>Aiyoh! Don't Kena Scam Leh!</TranslatableText>
             <div className="text-sm sm:text-base font-richblack mt-6">
-              Watch our scam parody music video created for #YAS2025.
+              <TranslatableText>
+                Watch our scam parody music video created for #YAS2025.
+              </TranslatableText>
               <br />
-              Like & share to help others stay alert.
+              <TranslatableText>
+                Like & share to help others stay alert.
+              </TranslatableText>
             </div>
           </div>
           <div className="text-xl sm:text-3xl text-center font-extralight my-8 sm:my-16 p-6 sm:p-10 bg-yellow-200 text-pennblue font-heavitas outline rounded-3xl">
-            Follow our Journey
+            <TranslatableText>Follow our Journey</TranslatableText>
             <div className="text-sm sm:text-base font-richblack mt-4 sm:mt-10">
-              Join us behind the scenes, from storyboards to 3D models, and see what student creators can do!
+              <TranslatableText>
+                Join us behind the scenes, from storyboards to 3D models, and see what student creators can do!
+              </TranslatableText>
             </div>
             <div className="flex gap-8 sm:gap-16 mt-6 items-center justify-center">
               <Link href="https://www.instagram.com/6ofus2025/" target="_blank">

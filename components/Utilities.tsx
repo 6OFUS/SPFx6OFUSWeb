@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { useTextSize } from "@/components/context/TextSizeContext";
+import { useLanguage } from "@/components/providers/language-provider";
 
 interface Message {
   sender: "user" | "bot";
@@ -23,7 +24,8 @@ export const Utilities = () => {
   const [userMessage, setUserMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [isDyslexic, setIsDyslexic] = useState(false);
-  const { setTextSize } = useTextSize();
+  const { language, setLanguage } = useLanguage();
+  const { textSize,setTextSize } = useTextSize();
 
   // Load saved preference on mount
   useEffect(() => {
@@ -48,8 +50,26 @@ export const Utilities = () => {
   };
 
   const settingsData = [
-    // { label: "Language", items: ["English", "Chinese", "Malay", "Tamil"], icon: "/utilities/languageIcon.png",},
-    { label: "Text Size", items: ["Small", "Medium", "Large", "Extra Large"], icon: "/utilities/textSizeIcon.png",}
+    {
+      label: "Language",
+      items: [
+        { code: "en", label: "English" },
+        { code: "zh", label: "中文" },
+        { code: "ms", label: "Bahasa Melayu" },
+        { code: "ta", label: "Tamil" },  
+      ],
+      icon: "/utilities/languageIcon.png",
+    },
+    {
+      label: "Text Size",
+      items: [
+        { code: "small", label: "Small" },
+        { code: "medium", label: "Medium" },
+        { code: "large", label: "Large" },
+        { code: "extralarge", label: "Extra Large" },
+      ],
+      icon: "/utilities/textSizeIcon.png",
+    },
   ];
 
   async function fetchGeminiResponse(history: Message[]) {
@@ -230,9 +250,23 @@ export const Utilities = () => {
                     {dropdown.items.map((item, subIndex) => (
                       <div
                         key={subIndex}
-                        className="bg-yellow-100 rounded-3xl px-4 py-3 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer"
+                        className={`rounded-3xl px-4 py-3 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer ${
+                          (dropdown.label === "Language" && item.code === language) ||
+                          (dropdown.label === "Text Size" && item.code === textSize)
+                            ? "bg-yellow-300"
+                            : "bg-yellow-100"
+                        }`}
+                        onClick={() => {
+                          if (dropdown.label === "Text Size") {
+                            const size = item.code as "small" | "medium" | "large" | "extralarge";
+                            setTextSize(size);
+                            localStorage.setItem("textSize", size);
+                          } else if (dropdown.label === "Language") {
+                            setLanguage(item.code);
+                          }
+                        }}
                       >
-                        {item}
+                        {item.label}
                       </div>
                     ))}
                   </div>
@@ -330,17 +364,24 @@ export const Utilities = () => {
                     {dropdown.items.map((item, subIndex) => (
                       <div
                         key={subIndex}
-                        className="bg-yellow-100 rounded-3xl px-4 py-2 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer"
+                        className={`rounded-3xl px-4 py-2 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300 cursor-pointer ${
+                          (dropdown.label === "Language" && item.code === language) ||
+                          (dropdown.label === "Text Size" && item.code === textSize)
+                            ? "bg-yellow-300"
+                            : "bg-yellow-100"
+                        }`}
                         onClick={() => {
-                          // Only handle Text Size dropdown
                           if (dropdown.label === "Text Size") {
-                            const size = item.toLowerCase().replace(" ", "") as "small" | "medium" | "large" | "extralarge";
-                            setTextSize(size); // update context
-                            localStorage.setItem("textSize", size); // optional: persist
+                            const size = item.code as "small" | "medium" | "large" | "extralarge";
+                            setTextSize(size);
+                            localStorage.setItem("textSize", size);
+                          } else if (dropdown.label === "Language") {
+                            setLanguage(item.code);
+                            console.log(`Language set to: ${item.code}`); // Debugging log
                           }
                         }}
                       >
-                        {item}
+                        {item.label}
                       </div>
                     ))}
                   </div>

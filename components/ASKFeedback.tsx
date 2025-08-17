@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Navbar } from './Navbar';
 import Link from "next/link";
+import TranslatableText from "./TranslatableText";
 
 export const ASKFeedback = () => {
   const [formData, setFormData] = useState({
@@ -79,12 +80,12 @@ export const ASKFeedback = () => {
       </Link>
       <section className="w-full max-w-2xl mb-40 px-4 flex flex-col justify-center items-center">
         <h2 className="text-3xl font-black text-pennblue mb-4 text-center">
-          WE'D LOVE TO HEAR FROM YOU!
+          <TranslatableText>WE'D LOVE TO HEAR FROM YOU!</TranslatableText>
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-4 md:space-y-0 md:space-x-4">
           <img src="ask/hhThumbsUp.png" alt="Game Info" className="w-1/2 md:w-1/3 max-w-full h-auto" />
           <h2 className="text-lg md:text-xl font-extrabold">
-            Help us improve this training experience. Share your thoughts after trying the game.
+            <TranslatableText>Help us improve this training experience. Share your thoughts after trying the game.</TranslatableText>
           </h2>
         </div>
 
@@ -109,7 +110,7 @@ export const ASKFeedback = () => {
           />
 
           <div className="w-full">
-            <p className="text-xl mb-2">How was your experience?</p>
+            <p className="text-xl mb-2"><TranslatableText>How was your experience?</TranslatableText></p>
             {['Excellent', 'Good', 'Okay', 'Can be better'].map((option) => (
               <label key={option} className="mr-4 text-lg">
                 <input
@@ -120,7 +121,7 @@ export const ASKFeedback = () => {
                   onChange={handleChange}
                   className="mr-1"
                 />
-                {option}
+                <TranslatableText>{option}</TranslatableText>
               </label>
             ))}
           </div>
@@ -142,7 +143,7 @@ export const ASKFeedback = () => {
 
           <div className="w-full">
             <p className="mb-2">
-              Would you recommend this training game to others?
+              <TranslatableText>Would you recommend this training game to others?</TranslatableText>
             </p>
             <label className="mr-4 text-lg">
               <input
@@ -153,7 +154,7 @@ export const ASKFeedback = () => {
                 onChange={handleChange}
                 className="mr-1"
               />
-              Yes
+              <TranslatableText>Yes</TranslatableText>
             </label>
             <label>
               <input
@@ -164,7 +165,7 @@ export const ASKFeedback = () => {
                 onChange={handleChange}
                 className="mr-1"
               />
-              No
+              <TranslatableText>No</TranslatableText>
             </label>
           </div>
 
@@ -175,7 +176,7 @@ export const ASKFeedback = () => {
               submitting ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
-            {submitting ? 'Submitting...' : 'Submit'}
+            <TranslatableText>{submitting ? 'Submitting...' : 'Submit'}</TranslatableText>
           </button>
         </form>
       </section>

@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import TranslatableText from "./TranslatableText";
 
 interface ASKProtocolProps {
   title: string;
@@ -50,9 +51,9 @@ export const ASKProtocol = () => {
   return (
     <section id="askprotocol" className="container py-24 sm:py-32 space-y-8">
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        A.S.K{" "}
+        <TranslatableText>A.S.K</TranslatableText>{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Protocol
+          <TranslatableText>Protocol</TranslatableText>
         </span>
       </h2>
 
@@ -60,7 +61,7 @@ export const ASKProtocol = () => {
         {askProtocolList.map((feature: string) => (
           <div key={feature}>
             <Badge variant="secondary" className="text-sm">
-              {feature}
+              <TranslatableText>{feature}</TranslatableText>
             </Badge>
           </div>
         ))}
@@ -70,10 +71,10 @@ export const ASKProtocol = () => {
         {features.map(({ title, description, image }: ASKProtocolProps) => (
           <Card key={title}>
             <CardHeader>
-              <CardTitle>{title}</CardTitle>
+              <CardTitle><TranslatableText>{title}</TranslatableText></CardTitle>
             </CardHeader>
 
-            <CardContent>{description}</CardContent>
+            <CardContent><TranslatableText>{description}</TranslatableText></CardContent>
 
             <CardFooter>
               <img
