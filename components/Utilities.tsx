@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 import { ChevronDown } from "lucide-react";
 import { useTextSize } from "@/components/context/TextSizeContext";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -193,7 +194,7 @@ export const Utilities = () => {
                     : "bg-earthy text-black border-2 border-black self-end"
                 } rounded-2xl px-4 py-2 text-sm shadow-inner w-2/3`}
               >
-                {msg.text}
+                <ReactMarkdown>{msg.text}</ReactMarkdown>
               </div>
             ))}
             {loading && (
@@ -307,7 +308,7 @@ export const Utilities = () => {
                     : "bg-earthy text-black border-2 border-black self-end"
                 } rounded-2xl px-4 py-2 text-sm shadow-inner w-2/3`}
               >
-                {msg.text}
+                <ReactMarkdown>{msg.text}</ReactMarkdown>
               </div>
             ))}
             {loading && (
