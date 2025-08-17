@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text-size-multiplier: 1;
+}
+
 .text-size-small {
-  font-size: 14px;
+  font-size: calc(0.875rem * var(--text-size-multiplier)); /* 14px */
 }
 
 .text-size-medium {
-  font-size: 16px;
+  font-size: calc(1rem * var(--text-size-multiplier)); /* 16px */
 }
 
 .text-size-large {
-  font-size: 20px;
+  font-size: calc(1.25rem * var(--text-size-multiplier)); /* 20px */
 }
 
 .text-size-extralarge {
-  font-size: 24px;
+  font-size: calc(1.5rem * var(--text-size-multiplier)); /* 24px */
 }
 
 .perspective {

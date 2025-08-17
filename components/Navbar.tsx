@@ -33,8 +33,9 @@ const dropdownData = [
   {
     label: "Shop Theft",
     items: [
-      { label: "Retail Safety Measures", href: "/shop-theft/safety" },
-      { label: "Consequences of Shoplifting", href: "/shop-theft/consequences" },
+      { label: "About Please Payleh!", href: "/shoptheft/about" },
+      { label: "Retail Safety Measures", href: "/shoptheft/safetymeasures" },
+      { label: "Consequences of Shoplifting", href: "/shoptheft/consequences" },
     ],
   },
 ];

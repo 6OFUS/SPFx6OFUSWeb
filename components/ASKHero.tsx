@@ -13,7 +13,7 @@ export const ASKHero = () => {
         </p>
       </div>
 
-      <section className="flex flex-col md:flex-row w-11/12 md:w-2/3 space-y-4 md:space-y-0 md:space-x-4 justify-center items-center px-4 mt-8">
+      <section className="flex flex-col md:flex-row w-11/12 md:w-2/3 space-y-4 md:space-y-0 md:space-x-4 justify-center items-center px-4 mt-8" data-aos="fade-up">
         <div className="space-y-4 w-full md:w-1/2">
           <h2 className="text-xl font-black text-pennblue">WHAT'S THIS GAME ABOUT?</h2>
           <p>
@@ -31,11 +31,11 @@ export const ASKHero = () => {
       </section>
 
       <section className="flex flex-col md:flex-row w-full md:w-2/3 justify-center items-center px-4 space-y-4 md:space-y-0 md:space-x-4 mt-8">
-        <img src="ask/whatIsASK.png" alt="What is ASK?" className="w-full md:w-1/2 max-w-full h-auto" />
-        <img src="ask/controls.png" alt="Game Controls" className="w-full md:w-1/2 max-w-full h-auto" />
+        <img src="ask/whatIsASK.png" alt="What is ASK?" className="w-full md:w-1/2 max-w-full h-auto" data-aos="fade-up"/>
+        <img src="ask/controls.png" alt="Game Controls" className="w-full md:w-1/2 max-w-full h-auto" data-aos="fade-up"/>
       </section>
 
-      <div className="py-12 w-full flex flex-col justify-center items-center space-y-4 px-4">
+      <div className="py-12 w-full flex flex-col justify-center items-center space-y-4 px-4" data-aos="fade-up">
         <p className="text-2xl text-center md:w-1/2 text-pennblue font-black">
           AFTER LEARNING WHAT A.S.K. IS… DO YOU KNOW HOW TO USE IT CORRECTLY IN-STORE?
         </p>
@@ -45,7 +45,7 @@ export const ASKHero = () => {
         <img src="ask/points.png" alt="Game Points" className="w-full md:w-1/3 max-w-full h-auto" />
       </div>
 
-      <section className="w-full max-w-2xl mt-20 px-4 flex flex-col justify-center items-center">
+      <section className="w-full max-w-2xl mt-20 px-4 flex flex-col justify-center items-center" data-aos="fade-up">
         <h2 className="text-3xl font-black text-pennblue mb-4 text-center">
           WE'D LOVE TO HEAR FROM YOU!
         </h2>
@@ -56,7 +56,7 @@ export const ASKHero = () => {
           </h2>
         </div>
       </section>
-      <Link href="/feedback" className="w-full flex justify-center items-center">
+      <Link href="/feedback" className="w-full flex justify-center items-center" data-aos="fade-up">
         <img src="ask/feedbackIcon.png" alt="Feedback" className="w-1/2 md:w-1/4 max-w-full mb-8" />
       </Link>
     </div>

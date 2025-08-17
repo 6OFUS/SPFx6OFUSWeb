@@ -32,14 +32,14 @@ export const StepsToTake = () => {
         </Link>
       </div>
       <div className="mb-32 bg-white rounded-3xl border-8 py-12 px-4 lg:px-24 border-black w-5/6 mx-auto shadow-sm font-nexa justify-center items-center flex flex-col space-y-8">
-        <div className="flex flex-col sm:flex-row items-center text-lg lg:text-xl w-full my-4">
+        <div className="flex flex-col sm:flex-row items-center text-lg lg:text-xl w-full my-4" data-aos="fade-up">
           <img src="steps/warning.png" alt="" className="w-1/6 h-auto flex mx-16 my-4" />
           <h2 className="font-bold"><p className="font-black">Steps to Take After Being Scammed</p><br></br>If you suspect you’ve been scammed, act immediately. Quick action can reduce your losses and help authorities catch the culprits.
           </h2>
         </div>
-        <img src="scamshieldDesktop.png" alt="Scam Shield Suite" className="w-full md:w-full my-10 h-auto hidden lg:flex" />
-        <img src="scamshieldMobile.png" alt="Scam Shield Suite" className="w-full md:w-full my-10 h-auto flex lg:hidden" />
-        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col xl:flex-row gap-6 w-full">
+        <img src="scamshieldDesktop.png" alt="Scam Shield Suite" className="w-full md:w-full my-10 h-auto hidden lg:flex" data-aos="fade-up"/>
+        <img src="scamshieldMobile.png" alt="Scam Shield Suite" className="w-full md:w-full my-10 h-auto flex lg:hidden" data-aos="fade-up"/>
+        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col xl:flex-row gap-6 w-full" data-aos="fade-up">
           <div className="flex justify-center w-full lg:w-1/4 h-auto">
             <img
               src="steps/scamshield.png"
@@ -64,7 +64,7 @@ export const StepsToTake = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full">
+        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full" data-aos="fade-up">
           <div className="flex justify-center w-full lg:w-1/4 h-auto">
             <img
               src="steps/stop.png"
@@ -84,7 +84,7 @@ export const StepsToTake = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full">
+        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full" data-aos="fade-up">
           <div className="flex justify-center w-full lg:w-1/4 h-auto">
             <img
               src="steps/bank.png"
@@ -104,7 +104,7 @@ export const StepsToTake = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full">
+        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full" data-aos="fade-up">
           <div className="flex justify-center w-full lg:w-1/4 h-auto">
             <img
               src="steps/police.png"
@@ -124,7 +124,7 @@ export const StepsToTake = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full">
+        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full" data-aos="fade-up">
           <div className="flex justify-center w-full lg:w-1/4 h-auto">
             <img
               src="steps/scamshield.png"
@@ -144,7 +144,7 @@ export const StepsToTake = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full">
+        <div className="bg-[#FFD475] border-4 border-black rounded-3xl justify-center items-center p-10 flex flex-col lg:flex-row gap-6 w-full" data-aos="fade-up">
           <div className="flex justify-center w-full lg:w-1/4 h-auto">
             <img
               src="steps/tell.png"

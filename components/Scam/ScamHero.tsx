@@ -78,7 +78,7 @@ export const ScamHero = () => {
           </div>
         </div>
       </div>
-      <div className="w-full text-2xl sm:text-5xl text-center justify-center items-center flex flex-col text-pennblue font-extralight my-20">
+      <div className="w-full text-2xl sm:text-5xl text-center justify-center items-center flex flex-col text-pennblue font-extralight my-20" data-aos="fade-up">
         What is A.C.T.?
         <div className="w-5/6 lg:w-2/3 my-10">
             <div className="relative" style={{ paddingTop: "56.25%" }}>

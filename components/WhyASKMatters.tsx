@@ -21,7 +21,7 @@ export const WhyASKMatters = () => {
           </p>
         </div>
 
-        <div className="rounded-xl mt-4 p-4 text-center justify-center flex">
+        <div className="rounded-xl mt-4 p-4 text-center justify-center flex" data-aos="fade-up">
           <img
             src="/ask/whatIsASK.png"
             alt="A.S.K. Diagram"
@@ -32,7 +32,7 @@ export const WhyASKMatters = () => {
         </div>
 
         <div className="space-y-4 mt-6">
-          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4">
+          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4" data-aos="fade-up">
             <h4 className="font-extrabold mb-4 text-xl">1. Prevents Theft Before It Happens</h4>
             <p className="text-lg">
               By politely engaging with suspicious individuals (Ask), staff can deter potential thieves who realise
@@ -40,7 +40,7 @@ export const WhyASKMatters = () => {
             </p>
           </div>
 
-          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4">
+          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4" data-aos="fade-up">
             <h4 className="font-extrabold mb-4 text-xl">2. Keeps Staff & Customers Safe</h4>
             <p className="text-lg">
               <span className="font-semibold">Stay Safe</span> by calling for security backup or staying nearby instead of taking risky
@@ -48,7 +48,7 @@ export const WhyASKMatters = () => {
             </p>
           </div>
 
-          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4">
+          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4" data-aos="fade-up">
             <h4 className="font-extrabold mb-4 text-xl">3. Reduces Confrontation & Conflict</h4>
             <p className="text-lg">
               <span className="font-semibold">Keep Close</span> to maintain visual contact, which discourages theft without creating a
@@ -56,7 +56,7 @@ export const WhyASKMatters = () => {
             </p>
           </div>
 
-          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4">
+          <div className="bg-[#FFD475] rounded-lg p-8 border-black border-4" data-aos="fade-up">
             <h4 className="font-extrabold mb-4 text-xl">4. Builds Trust in the Community</h4>
             <p className="text-lg">
               A.S.K. shows that the store values safety and fairness for all, making honest customers feel welcome and
