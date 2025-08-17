@@ -23,9 +23,18 @@ export const TextSizeProvider = ({ children }: { children: React.ReactNode }) =>
     localStorage.setItem("textSize", size);
   };
 
+  const sizeMultipliers: { [key in TextSize]: number } = {
+    small: 0.8,
+    medium: 1,
+    large: 1.2,
+    extralarge: 1.5,
+  };
+
   return (
     <TextSizeContext.Provider value={{ textSize, setTextSize }}>
-      <div className={`text-size-${textSize}`}>{children}</div>
+      <div style={{ "--font-size-multiplier": sizeMultipliers[textSize] } as React.CSSProperties}>
+        {children}
+      </div>
     </TextSizeContext.Provider>
   );
 };
