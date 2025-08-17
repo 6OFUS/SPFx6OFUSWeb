@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import TranslatableText from "./TranslatableText";
 
 const dropdownData = [
   {
@@ -91,7 +92,7 @@ export const Navbar = () => {
                   className="bg-white rounded-full flex items-center justify-between px-4 py-3 border-4 border-earthy cursor-pointer"
                   onClick={() => toggleDropdown(index)}
                 >
-                  <span className="text-base font-bold text-gray-800">{dropdown.label}</span>
+                  <span className="text-base font-bold text-gray-800"><TranslatableText>{dropdown.label}</TranslatableText></span>
                   <ChevronDown className="w-5 h-5 text-gray-600" />
                 </div>
                 {openIndex === index && dropdown.items.length > 0 && (
@@ -102,7 +103,7 @@ export const Navbar = () => {
                         href={item.href}
                         className="block bg-yellow-100 rounded-3xl px-4 py-3 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300"
                       >
-                        {item.label}
+                        <TranslatableText>{item.label}</TranslatableText>
                       </Link>
                     ))}
                   </div>
@@ -120,7 +121,7 @@ export const Navbar = () => {
                   className="bg-white rounded-full flex items-center justify-between px-4 py-2 border-4 border-earthy cursor-pointer"
                   onClick={() => toggleDropdown(index)}
                 >
-                  <span className="text-sm font-bold text-gray-800">{dropdown.label}</span>
+                  <span className="text-sm font-bold text-gray-800"><TranslatableText>{dropdown.label}</TranslatableText></span>
                   <ChevronDown className="w-4 h-4 text-gray-600" />
                 </div>
                 {openIndex === index && dropdown.items.length > 0 && (
@@ -131,7 +132,7 @@ export const Navbar = () => {
                         href={item.href}
                         className="block bg-yellow-100 rounded-3xl px-4 py-2 text-sm text-gray-800 shadow-inner border-4 border-earthy hover:bg-yellow-300"
                       >
-                        {item.label}
+                        <TranslatableText>{item.label}</TranslatableText>
                       </Link>
                     ))}
                   </div>

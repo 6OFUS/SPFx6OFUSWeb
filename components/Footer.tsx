@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TranslatableText from "./TranslatableText";
 
 export const Footer = () => {
   return (
@@ -25,13 +26,13 @@ export const Footer = () => {
         </div>
 
         <div className="order-3 flex flex-col gap-2 items-center lg:items-end text-center lg:text-right">
-          <div className="font-heavy">Contact us at: 6ofus2025@gmail.com</div>
-          <div className="font-heavy">© 2025 6OFUS | All rights reserved</div>
+          <div className="font-heavy"><TranslatableText>Contact us at: 6ofus2025@gmail.com</TranslatableText></div>
+          <div className="font-heavy"><TranslatableText>© 2025 6OFUS | All rights reserved</TranslatableText></div>
           <Link
             href="/credits"
             className="font-heavy underline text-red-500 hover:text-red-700"
           >
-            Credits and Acknowledgements
+            <TranslatableText>Credits and Acknowledgements</TranslatableText>
           </Link>
         </div>
 

@@ -47,8 +47,9 @@ export default function RootLayout({
                 <TextSizeProvider>
                   <div className="flex-1">{children}</div>
                 </TextSizeProvider>
+              
+                <Footer />
               </LanguageProvider>
-              <Footer />
               {/* <ScrollToTop /> */}
             </div>
           {/* </ThemeProvider> */}

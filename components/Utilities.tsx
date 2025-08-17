@@ -74,22 +74,14 @@ export const Utilities = () => {
 
   async function fetchGeminiResponse(history: Message[]) {
     try {
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: history.map((msg) => ({
-                  text: `${msg.sender === "user" ? "User" : "Bot"}: ${msg.text}`,
-                })),
-              },
-            ],
-          }),
-        }
-      );
+      const userMessage = history[history.length - 1].text;
+      const response = await fetch('/api/gemini', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: userMessage }),
+      });
 
       if (!response.ok) {
         const errorText = await response.text();

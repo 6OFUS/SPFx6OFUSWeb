@@ -13,6 +13,7 @@ import { buttonVariants } from "./ui/button";
 import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import TranslatableText from "./TranslatableText";
 const { title } = siteConfig;
 
 export const MobileNavFragment = () => {
@@ -30,7 +31,7 @@ export const MobileNavFragment = () => {
 
       <SheetContent side={"left"}>
         <SheetHeader>
-          <SheetTitle className="font-bold text-xl">{title}</SheetTitle>
+          <SheetTitle className="font-bold text-xl"><TranslatableText>{title}</TranslatableText></SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col justify-center items-center gap-2 mt-4">
           {navbarLinksList.map(({ href, label }: NavProps) => (
@@ -40,7 +41,7 @@ export const MobileNavFragment = () => {
               onClick={() => setIsOpen(false)}
               className={buttonVariants({ variant: "ghost" })}
             >
-              {label}
+              <TranslatableText>{label}</TranslatableText>
             </Link>
           ))}
         </nav>

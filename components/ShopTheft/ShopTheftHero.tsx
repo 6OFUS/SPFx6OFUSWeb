@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Navbar } from "../Navbar";
 import { Utilities } from "../Utilities";
+import TranslatableText from "../TranslatableText";
 
 export const ShopTheftHero = () => {
   return (
@@ -14,7 +15,7 @@ export const ShopTheftHero = () => {
           <img src="shoptheft/shoptheftmenu.png" alt="" className="mx-auto w-full lg:w-1/2" />
           <img src="/coming-soon/follow.png" alt="" className="mx-auto w-0 lg:w-1/2" />
         </div>
-        <p className="text-xl my-10 text-center">Please Pay Leh! is currently under development for the roadshow. Do follow out socialmedia for updates.</p>
+        <p className="text-xl my-10 text-center"><TranslatableText>Please Pay Leh! is currently under development for the roadshow. Do follow out socialmedia for updates.</TranslatableText></p>
         <div className="flex flex-col lg:flex-row my-10 space-y-4 lg:space-y-0">
           <Link href="/shoptheft/about" className="h-auto flex hover:scale-105 transition-transform duration-300 mx-10">
             <img

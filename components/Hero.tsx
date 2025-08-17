@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import Link from "next/link";
+import TranslatableText from "./TranslatableText";
 
 export const Hero = () => {
   return (
@@ -10,23 +11,25 @@ export const Hero = () => {
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              Shop Smart.
+              <TranslatableText>Shop Smart.</TranslatableText>
             </span>{" "}
-            Stay Alert.
+            <TranslatableText>Stay Alert.</TranslatableText>
           </h1>{" "}
           <h2 className="inline">
             <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-              Make a Difference.
+              <TranslatableText>Make a Difference.</TranslatableText>
             </span>{" "}
           </h2>
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Please PayLeh! is a short interactive experience that shows you what to look out for when something doesn’t seem right in a store.
+          <TranslatableText>
+            Please PayLeh! is a short interactive experience that shows you what to look out for when something doesn’t seem right in a store.
+          </TranslatableText>
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Try It Now</Button>
+          <Button className="w-full md:w-1/3"><TranslatableText>Try It Now</TranslatableText></Button>
 
           <Link
             href="/"
@@ -35,7 +38,7 @@ export const Hero = () => {
               variant: "outline",
             })}`}
           >
-            Learn More
+            <TranslatableText>Learn More</TranslatableText>
           </Link>
         </div>
       </div>

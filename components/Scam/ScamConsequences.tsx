@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Navbar } from "../Navbar";
+import TranslatableText from '../TranslatableText';
 
 export const ScamConsequences = () => {
   return (
@@ -34,7 +35,7 @@ export const ScamConsequences = () => {
       <div className="mb-32 bg-white rounded-3xl border-8 py-12 px-4 lg:px-24 border-black w-5/6 mx-auto shadow-sm font-nexa justify-center items-center flex flex-col space-y-8">
         <div className="flex flex-col md:flex-row justify-center items-center text-lg lg:text-xl" data-aos="fade-up">
           <img src="consequences/money.png" alt="" className="w-4/5 md:w-1/6 h-auto flex m-4 lg:m-16" />
-          <h2 className="font-bold mx-4"><p className="font-black">Scam Consequences: Don’t Be a Money Mule</p><br></br>Why Helping Scammers Puts You at Risk?
+          <h2 className="font-bold mx-4"><p className="font-black"><TranslatableText>Scam Consequences: Don’t Be a Money Mule</TranslatableText></p><br></br><TranslatableText>Why Helping Scammers Puts You at Risk?</TranslatableText>
           </h2>
         </div>
         <div className="w-5/6 lg:w-2/3 my-10" data-aos="fade-up">
@@ -50,49 +51,49 @@ export const ScamConsequences = () => {
         <div className="bg-[#FFD475] border-4 border-black rounded-3xl p-1 lg:p-10 flex flex-col xl:flex-row gap-6 w-11/12" data-aos="fade-up">
           <div className='px-2 lg:px-8 flex justify-center flex-col space-y-4'>
             <h2 className="font-extrabold text-2xl text-black mb-2">
-              Serious Criminal Charges as a Money Mule
+              <TranslatableText>Serious Criminal Charges as a Money Mule</TranslatableText>
             </h2>
             <div className="text-lg text-black font-bold mb-2">
-              If you let someone use your bank account, you're liable under multiple laws even if you didn’t handle the scam yourself. These include:
+              <TranslatableText>If you let someone use your bank account, you're liable under multiple laws even if you didn’t handle the scam yourself. These include:</TranslatableText>
               <br></br>
               <ul>
-                <li>Corruption, Drug Trafficking and Other Serious Crimes Act (CDSA): Permitting your account to facilitate criminal activities may lead to up to 5 years in prison and a fine of up to S$250,000</li>
+                <li><TranslatableText>Corruption, Drug Trafficking and Other Serious Crimes Act (CDSA): Permitting your account to facilitate criminal activities may lead to up to 5 years in prison and a fine of up to S$250,000</TranslatableText></li>
               </ul>
             </div>
             <p className="text-lg text-black font-bold mb-2">
-              Link:{" "}
+              <TranslatableText>Link:</TranslatableText>{" "}
               <a
                 href="https://blog.maxthon.com/2025/04/06/money-mules-sentenced-in-singapore/?utm_source=chatgpt.com"
                 className="text-red-600 underline font-semibold"
                 target='_blank'
               >
-                Maxthon | Privacy Private Browser
+                <TranslatableText>Maxthon | Privacy Private Browser</TranslatableText>
               </a>
             </p>
             <p className="text-lg text-black font-bold mb-2">
-              Computer Misuse Act (CMA): Disclosing Singpass access or assisting unauthorized system access can result in up to 3 years in jail and fines up to S$10,000
+              <TranslatableText>Computer Misuse Act (CMA): Disclosing Singpass access or assisting unauthorized system access can result in up to 3 years in jail and fines up to S$10,000</TranslatableText>
             </p>
             <p className="text-lg text-black font-bold">
-              Link:{" "}
+              <TranslatableText>Link:</TranslatableText>{" "}
               <a
                 href="https://www.sc.com/sg/fraud-scam/money-mule/?utm_source=chatgpt.com"
                 className="text-red-600 underline font-semibold"
                 target='_blank'
               >
-                Standard Chartered Bank
+                <TranslatableText>Standard Chartered Bank</TranslatableText>
               </a>
             </p>
             <p className="text-lg text-black font-bold mb-2">
-              Penal Code - Abetting Cheating & Retaining Proceeds: Helping criminals benefit financially may incur up to 3 years in prison, a fine, or both
+              <TranslatableText>Penal Code - Abetting Cheating & Retaining Proceeds: Helping criminals benefit financially may incur up to 3 years in prison, a fine, or both</TranslatableText>
             </p>
             <p className="text-lg text-black font-bold">
-              Link:{" "}
+              <TranslatableText>Link:</TranslatableText>{" "}
               <a
                 href="https://www.police.gov.sg/media-room/news/20240908_40_persons_to_be_charged_for_suspected_involvement_in_scam_related_money_mule_activities?utm_source=chatgpt.com"
                 className="text-red-600 underline font-semibold"
                 target='_blank'
               >
-                Singapore Police Force
+                <TranslatableText>Singapore Police Force</TranslatableText>
               </a>
             </p>
           </div>

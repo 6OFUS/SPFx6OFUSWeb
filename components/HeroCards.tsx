@@ -11,6 +11,7 @@ import {
 import { Instagram, Youtube } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import TranslatableText from "./TranslatableText";
 
 export const HeroCards = () => {
   return (
@@ -28,12 +29,12 @@ export const HeroCards = () => {
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Alfred Kang</CardTitle>
-            <CardDescription>@alfredkangjr</CardDescription>
+            <CardTitle className="text-lg"><TranslatableText>Alfred Kang</TranslatableText></CardTitle>
+            <CardDescription><TranslatableText>@alfredkangjr</TranslatableText></CardDescription>
           </div>
         </CardHeader>
 
-        <CardContent>just saw someone try to sneak a bottle past the cashier… don’t play play, shop theft is real sia 😤 #StayAlert #PleasePayLeh</CardContent>
+        <CardContent><TranslatableText>just saw someone try to sneak a bottle past the cashier… don’t play play, shop theft is real sia 😤 #StayAlert #PleasePayLeh</TranslatableText></CardContent>
       </Card>
 
       {/* 6OFUS */}
@@ -46,15 +47,17 @@ export const HeroCards = () => {
             height={100}
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover bg-white"
           />
-          <CardTitle className="text-center">6OFUS</CardTitle>
+          <CardTitle className="text-center"><TranslatableText>6OFUS</TranslatableText></CardTitle>
           <CardDescription className="font-normal text-primary">
-            Game Design Studio 
+            <TranslatableText>Game Design Studio</TranslatableText> 
           </CardDescription>
         </CardHeader>
 
         <CardContent className="text-center pb-2">
           <p>
-            We want to create immersive VR experiences that benefit the community
+            <TranslatableText>
+              We want to create immersive VR experiences that benefit the community
+            </TranslatableText>
           </p>
         </CardContent>
 
@@ -111,7 +114,7 @@ export const HeroCards = () => {
         </CardHeader>
         <CardFooter className="flex">
           <p className="font-bold text-xl text-center">
-            Partnering with: Singapore Police Force (i ran out of ideas)
+            <TranslatableText>Partnering with: Singapore Police Force (i ran out of ideas)</TranslatableText>
           </p>
         </CardFooter>
       </Card>
@@ -127,10 +130,12 @@ export const HeroCards = () => {
               />
           </div>
           <div>
-            <CardTitle>PayLeh!</CardTitle>
+            <CardTitle><TranslatableText>PayLeh!</TranslatableText></CardTitle>
             <CardDescription className="text-md mt-2">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Consectetur
-              natusm.
+              <TranslatableText>
+                Lorem ipsum dolor sit amet consect adipisicing elit. Consectetur
+                natusm.
+              </TranslatableText>
             </CardDescription>
           </div>
         </CardHeader>

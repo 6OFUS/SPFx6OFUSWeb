@@ -1,3 +1,5 @@
+import TranslatableText from "./TranslatableText";
+
 export const Statistics = () => {
   interface statsProps {
     quantity: string;
@@ -31,8 +33,8 @@ export const Statistics = () => {
             key={description}
             className="space-y-2 text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold ">{quantity}</h2>
-            <p className="text-xl text-muted-foreground">{description}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold "><TranslatableText>{quantity}</TranslatableText></h2>
+            <p className="text-xl text-muted-foreground"><TranslatableText>{description}</TranslatableText></p>
           </div>
         ))}
       </div>

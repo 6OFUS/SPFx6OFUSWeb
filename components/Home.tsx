@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Navbar } from "./Navbar";
+import TranslatableText from "./TranslatableText";
 
 export const Home = () => {
   return (
@@ -20,7 +21,9 @@ export const Home = () => {
               className="w-full max-w-xs mx-auto mb-2 md:mb-4 p-2 md:p-4 cursor-pointer"
             />
             <p className="text-base w-11/12 md:w-2/3">
-              Click to learn more about our scam VR simulator.
+              <TranslatableText>
+                Click to learn more about our scam VR simulator.
+              </TranslatableText>
             </p>
           </Link>
         </div>
@@ -38,7 +41,9 @@ export const Home = () => {
               className="w-full max-w-xs mb-2 md:mb-4 p-2 md:p-4 cursor-pointer"
             />
             <p className="text-base w-11/12 md:w-2/3">
-              Click to learn more about our group.
+              <TranslatableText>
+                Click to learn more about our group.
+              </TranslatableText>
             </p>
           </Link>
         </div>
@@ -56,7 +61,9 @@ export const Home = () => {
               className="w-full max-w-xs mx-auto mb-2 md:mb-4 p-2 md:p-4 cursor-pointer"
             />
             <p className="text-base w-11/12 md:w-2/3">
-              For retail staff only! A.S.K training & test inside.
+              <TranslatableText>
+                For retail staff only! A.S.K training & test inside.
+              </TranslatableText>
             </p>
           </Link>
         </div>

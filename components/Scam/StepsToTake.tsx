@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Navbar } from "../Navbar";
+import TranslatableText from '../TranslatableText';
 
 export const StepsToTake = () => {
   return (
@@ -34,7 +35,7 @@ export const StepsToTake = () => {
       <div className="mb-32 bg-white rounded-3xl border-8 py-12 px-4 lg:px-24 border-black w-5/6 mx-auto shadow-sm font-nexa justify-center items-center flex flex-col space-y-8">
         <div className="flex flex-col sm:flex-row items-center text-lg lg:text-xl w-full my-4" data-aos="fade-up">
           <img src="steps/warning.png" alt="" className="w-1/6 h-auto flex mx-16 my-4" />
-          <h2 className="font-bold"><p className="font-black">Steps to Take After Being Scammed</p><br></br>If you suspect you’ve been scammed, act immediately. Quick action can reduce your losses and help authorities catch the culprits.
+          <h2 className="font-bold"><p className="font-black"><TranslatableText>Steps to Take After Being Scammed</TranslatableText></p><br></br><TranslatableText>If you suspect you’ve been scammed, act immediately. Quick action can reduce your losses and help authorities catch the culprits.</TranslatableText>
           </h2>
         </div>
         <img src="scamshieldDesktop.png" alt="Scam Shield Suite" className="w-full md:w-full my-10 h-auto hidden lg:flex" data-aos="fade-up"/>
@@ -49,18 +50,18 @@ export const StepsToTake = () => {
           </div>
           <div className='px-2 lg:px-8 flex justify-center flex-col space-y-4 w-4/5'>
             <h2 className="font-extrabold text-2xl text-black mb-2">
-              Why ScamShield Matters
+              <TranslatableText>Why ScamShield Matters</TranslatableText>
             </h2>
             <div className="text-lg text-black font-bold mb-2">
-              ScamShield is Singapore’s official anti-scam app, developed by GovTech and the Singapore Police Force. It:
+              <TranslatableText>ScamShield is Singapore’s official anti-scam app, developed by GovTech and the Singapore Police Force. It:</TranslatableText>
               <br></br><br></br>
               <ul>
-                <li>Blocks scam calls & texts using a constantly updated database.</li>
-                <li>Filters suspicious SMS before you even see them.</li>
-                <li>Lets you report scams instantly to the police.</li>
+                <li><TranslatableText>Blocks scam calls & texts using a constantly updated database.</TranslatableText></li>
+                <li><TranslatableText>Filters suspicious SMS before you even see them.</TranslatableText></li>
+                <li><TranslatableText>Lets you report scams instantly to the police.</TranslatableText></li>
               </ul>
               <br></br><br></br>
-              Protect yourself before scams happen.
+              <TranslatableText>Protect yourself before scams happen.</TranslatableText>
             </div>
           </div>
         </div>
@@ -74,12 +75,12 @@ export const StepsToTake = () => {
           </div>
           <div className='px-2 w-4/5 lg:px-8 flex justify-center flex-col space-y-4'>
             <h2 className="font-black text-3xl text-black mb-2">
-              1. Stop All Contact
+              <TranslatableText>1. Stop All Contact</TranslatableText>
             </h2>
             <div className="text-xl text-black font-bold mb-2">
               <ul>
-                <li>Don’t reply to calls, messages, or emails from the scammer.</li>
-                <li>Block their number and report the contact.</li>
+                <li><TranslatableText>Don’t reply to calls, messages, or emails from the scammer.</TranslatableText></li>
+                <li><TranslatableText>Block their number and report the contact.</TranslatableText></li>
               </ul>
             </div>
           </div>
@@ -94,12 +95,12 @@ export const StepsToTake = () => {
           </div>
           <div className='px-2 w-4/5 lg:px-8 flex justify-center flex-col space-y-4'>
             <h2 className="font-black text-3xl text-black mb-2">
-              2. Contact Your Bank Immediately
+              <TranslatableText>2. Contact Your Bank Immediately</TranslatableText>
             </h2>
             <div className="text-xl text-black font-bold mb-2">
               <ul>
-                <li>Call your bank’s 24-hour hotline to freeze your accounts or cards.</li>
-                <li>Ask about activating the kill switch to halt transactions.</li>
+                <li><TranslatableText>Call your bank’s 24-hour hotline to freeze your accounts or cards.</TranslatableText></li>
+                <li><TranslatableText>Ask about activating the kill switch to halt transactions.</TranslatableText></li>
               </ul>
             </div>
           </div>
@@ -114,12 +115,12 @@ export const StepsToTake = () => {
           </div>
           <div className='px-2 w-4/5 lg:px-8 flex justify-center flex-col space-y-4'>
             <h2 className="font-black text-3xl text-black mb-2">
-              3. File a Police Report
+              <TranslatableText>3. File a Police Report</TranslatableText>
             </h2>
             <div className="text-xl text-black font-bold mb-2">
               <ul>
-                <li>Use the SPF e-service or visit a police station.</li>
-                <li>Provide screenshots, transaction records, and all communication with the scammer.</li>
+                <li><TranslatableText>Use the SPF e-service or visit a police station.</TranslatableText></li>
+                <li><TranslatableText>Provide screenshots, transaction records, and all communication with the scammer.</TranslatableText></li>
               </ul>
             </div>
           </div>
@@ -134,12 +135,12 @@ export const StepsToTake = () => {
           </div>
           <div className='px-2 w-4/5 lg:px-8 flex justify-center flex-col space-y-4'>
             <h2 className="font-black text-3xl text-black mb-2">
-              4. Report Through ScamShield
+              <TranslatableText>4. Report Through ScamShield</TranslatableText>
             </h2>
             <div className="text-xl text-black font-bold mb-2">
               <ul>
-                <li>Download the ScamShield App (<Link href="https://scamshield.gov.sg" className='text-red-600 underline' target='_blank'>scamshield.gov.sg</Link>) to block scam calls/SMS and report suspicious messages instantly.</li>
-                <li>Use the ScamShield WhatsApp bot to check unknown numbers and URLs before you act.</li>
+                <li><TranslatableText>Download the ScamShield App (</TranslatableText><Link href="https://scamshield.gov.sg" className='text-red-600 underline' target='_blank'><TranslatableText>scamshield.gov.sg</TranslatableText></Link><TranslatableText>) to block scam calls/SMS and report suspicious messages instantly.</TranslatableText></li>
+                <li><TranslatableText>Use the ScamShield WhatsApp bot to check unknown numbers and URLs before you act.</TranslatableText></li>
               </ul>
             </div>
           </div>
@@ -154,12 +155,12 @@ export const StepsToTake = () => {
           </div>
           <div className='px-2 w-4/5 lg:px-8 flex justify-center flex-col space-y-4'>
             <h2 className="font-black text-3xl text-black mb-2">
-              5. Tell Others
+              <TranslatableText>5. Tell Others</TranslatableText>
             </h2>
             <div className="text-xl text-black font-bold mb-2">
               <ul>
-                <li>Warn friends, family, and colleagues so they don’t fall for the same scam.</li>
-                <li>Share your experience on social media or community chat groups.</li>
+                <li><TranslatableText>Warn friends, family, and colleagues so they don’t fall for the same scam.</TranslatableText></li>
+                <li><TranslatableText>Share your experience on social media or community chat groups.</TranslatableText></li>
               </ul>
             </div>
           </div>
